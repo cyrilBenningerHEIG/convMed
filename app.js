@@ -4,7 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var app = express();
-var {db} = require("./db.js")
+const { startDb } = require('./db');
 
 
 //
@@ -46,7 +46,8 @@ app.use(function(err, req, res, next) {
 
 app.set('json spaces', 2);
 
-db().once('open', () => {
+startDb()
+  .once('open', () => {
     app.listen(8000, () => {
       console.log('App is listening on port 8000');
     });
