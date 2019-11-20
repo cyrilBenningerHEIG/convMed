@@ -9,11 +9,11 @@ aysnc function migrateData() {
     const data = {
       questiontxt: q.questiontxt,
       repjuste: q.repjuste,
-      repfausse1: q.repfausse1
-      repfausse2: q.repfausse2
-      repfausse3: q.repfausse3
-      info2: q.info2
-      info: q.info
+      repfausse1: q.repfausse1,
+      repfausse2: q.repfausse2,
+      repfausse3: q.repfausse3,
+      info2: q.info2,
+      info: q.info,
       type: q.type
     }
     await Question.create(data);
