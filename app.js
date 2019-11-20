@@ -3,26 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var seeder = require('mongoose-seed');
-//SEEDER
-seeder.connect('mongodb://heroku_vcpp2jlx:ioqsf961jnopl2v0u2gd5ujtai@ds047958.mlab.com:47958/heroku_vcpp2jlx', function() {
- 
-  // Load Mongoose models
-  seeder.loadModels([
-    'app/models/question.js',
-    'app/models/response.js'
-  ]);
- 
-  // Clear specified collections
-  seeder.clearModels(['Question', 'Response'], function() {
- 
-    // Callback to populate DB once collections have been cleared
-    seeder.populateModels(data, function() {
-      seeder.disconnect();
-    });
- 
-  });
-});
+
 //
 const mongoose = require('mongoose');
 mongoose.Promise = Promise;
