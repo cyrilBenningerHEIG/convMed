@@ -26,14 +26,13 @@ var responseQuiz = [
     photo_response : "https://drive.google.com/open?id=1jU2_pNKuH3I9POql2ks4AeMlzDDKsJvm",
     text_question : "L'européen oublie trop souvent qu'il n'est rien face à la nature qui reprend ses droits",
     info : "C'est Coluche ! A son époque, il était déjà conscient de l'enjeu de l'écologie.",
-    },
-    
+    }
 ]
 var responsePhoto = [
     
 ]
 
-new Response(responseQuiz[0]).save();
+
 
 
 
