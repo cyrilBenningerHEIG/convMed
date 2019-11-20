@@ -4,7 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var app = express();
-import db from "db.js";
+var db = require("db.js")
 
 
 //
