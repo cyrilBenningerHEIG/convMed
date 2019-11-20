@@ -5,10 +5,10 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var app = express();
 const { startDb } = require('./db');
-const mongoose = require('mongoose');
 
 
 //
+const mongoose = require('mongoose');
 mongoose.Promise = Promise;
 
 var indexRouter = require('./routes/index');
@@ -45,7 +45,9 @@ app.use(function(err, req, res, next) {
 });
 
 app.set('json spaces', 2);
-mongoose.once('open', () => {
+
+startDb()
+  .once('open', () => {
     app.listen(8000, () => {
       console.log('App is listening on port 8000');
     });
