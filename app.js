@@ -46,7 +46,7 @@ app.use(function(err, req, res, next) {
 
 app.set('json spaces', 2);
 
-// startDb()
+startDb()
 //   .once('open', () => {
 //     app.listen(8000, () => {
 //       console.log('App is listening on port 8000');
