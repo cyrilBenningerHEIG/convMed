@@ -1,7 +1,7 @@
 const data = [
     {
         "questiontxt": "Vous ne parlez que d'aller de l'avant avec les mêmes mauvaises idées qui nous ont mis dans ce pétrin, même si la seule chose raisonnable à faire est de tirer le frein à main.",
-        "repjuste": "Greta Thunberg\n",
+        "repjuste": "Greta Thunberg",
         "repfausse1": "Lewis Hamilton",
         "repfausse2": "Nicolas Hulot",
         "repfausse3": "Darius Rochebin",
@@ -15,7 +15,7 @@ const data = [
         "repjuste": "Nekfeu",
         "repfausse1": "Jean-Jacques Rousseau ",
         "repfausse2": "Lao Tseu",
-        "repfausse3": "Greta Thunberg\n",
+        "repfausse3": "Greta Thunberg",
         "repphoto": "img/quote/nekfeu",
         "info2": 2019,
         "info": "C'est un titre du rappeur français Nekfeu, Premier pas, tiré de son dernière album Les Étoiles Vagabondes. Comme quoi, malgré leur réputation, les rappeurs peuvent être touchés par des causes primordiales comme l'écologie. ",
@@ -282,4 +282,4 @@ const data = [
     }
 ]
 
-module.exports = {data}
+module.exports = { data }
