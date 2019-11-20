@@ -2,7 +2,7 @@ const { startDb, closeDb } = require('./db');
 const { Question } = require('./models/question');
 const { data } = require('./data');
 
-aysnc function migrateData() {
+async function migrateData() {
   // Looping through the questions from the data.js file
   for (let i = 0; i < data.length; i++) {
     const q = data[i];
