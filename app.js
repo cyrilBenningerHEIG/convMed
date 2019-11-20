@@ -44,19 +44,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-
-const app = express();
-
-app.use(express.static('../quizz'));
 app.set('json spaces', 2);
-
-app.use(require('./routes'));
-
-app.use((req, res) => {
-  res.status(404)
-    .send('Unknown Request');
-});
-
 startDb()
   .once('open', () => {
     app.listen(8000, () => {
