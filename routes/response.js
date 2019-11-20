@@ -32,15 +32,8 @@ var responseQuiz = [
 var responsePhoto = [
     
 ]
-router.post('/', function (req, res, next) {
-    new Response(responseQuiz[0])
-    
-    .save(function (err, savedMovie) {
-        if (err) {
-          return next(err);
-        };
-    });
-});
+
+new Response(responseQuiz[0]).save();
 
 
 
