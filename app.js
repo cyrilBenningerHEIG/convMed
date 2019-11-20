@@ -4,6 +4,13 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+////////
+app.get('/', function (req, res) {
+  res.render('index',
+  { title : 'KJSDHAKJSH' }
+  )
+})
+
 
 //
 const mongoose = require('mongoose');
