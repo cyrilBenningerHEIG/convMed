@@ -45,6 +45,7 @@ app.use(function(err, req, res, next) {
 });
 
 app.set('json spaces', 2);
+
 startDb()
   .once('open', () => {
     app.listen(8000, () => {
