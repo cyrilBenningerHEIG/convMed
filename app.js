@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var app = express();
+const { startDb } = require('./db');
 
 
 //
@@ -42,4 +43,25 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+
+const app = express();
+
+app.use(express.static('../quizz'));
+app.set('json spaces', 2);
+
+app.use(require('./routes'));
+
+app.use((req, res) => {
+  res.status(404)
+    .send('Unknown Request');
+});
+
+startDb()
+  .once('open', () => {
+    app.listen(8000, () => {
+      console.log('App is listening on port 8000');
+    });
+  });
+
 module.exports = app;
