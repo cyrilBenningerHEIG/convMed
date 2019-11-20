@@ -4,6 +4,10 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+const mongoose = require('mongoose');
+mongoose.Promise = Promise;
+mongoose.connect('mongodb://heroku_vcpp2jlx:ioqsf961jnopl2v0u2gd5ujtai@ds047958.mlab.com:47958/heroku_vcpp2jlx');
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
