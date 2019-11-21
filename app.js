@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var app = express();
 const { startDb } = require('./db');
+const { data } = require('./data');
 
 
 //
@@ -13,6 +14,7 @@ mongoose.Promise = Promise;
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var quizRouter = require('./routes/quiz');
 
 
 // view engine setup
@@ -26,7 +28,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/data', quizRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -44,13 +47,20 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.set('json spaces', 2);
-
+console.log(startDb);
 startDb()
+
+  .then(() => {
+    app.listen(8000, () => {
+      console.log('App is listening on port 8000');
+    });
+  });
+
   // .once('open', () => {
   //   app.listen(8000, () => {
   //     console.log('App is listening on port 8000');
   //   });
   // });
+
 
 module.exports = app;
