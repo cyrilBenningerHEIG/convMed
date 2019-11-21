@@ -16,7 +16,8 @@
     "mongoose": "^5.7.12",
     "mongoose-data-seed": "^2.1.4",
     "mongoose-seed": "^0.6.0",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "node-localstorage": "^2.1.4"
   },
   "devDependencies": {
     "nodemon": "^1.19.4"
