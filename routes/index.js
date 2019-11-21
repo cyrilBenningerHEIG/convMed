@@ -22,11 +22,12 @@ router.get('/reponseVRAI', function(req, res, next) {
 router.get('/reponseFAUX', function(req, res, next) {
   res.render('reponseFAUX', { fauxVar: 'FAUX'});
 });
-router.get('/match', function (req, res, next) {
-  let question=Quiz.find({type:'1'}).exec();
-  res.json(question);
-  //res.render('index', { title: 'Express' });
+router.get('/match', async function (req, res, next) {
+    question = await Quiz.find({type:true}).sort("_id");
+    res.render('question',{ qNumber: 'Q', reponse1: question[0].repjuste, reponse2: question[0].repfausse1, reponse3: question[0].repfausse2, reponse4: question[0].repfausse3 ,type:question.type})
+    //res.send(question);
 });
+
 router.get('/Citations', function (req, res, next) {
   res.render('index', { title: 'Express' });
 });
@@ -40,5 +41,10 @@ router.get('/seed', function (req, res, next) {
   res.send(seed);
 });
 
+async function GetData(typeQuiz){
+  let question = await Quiz.find({type:typeQuiz});
+  
+  return question;
+} 
 
 module.exports = router;
