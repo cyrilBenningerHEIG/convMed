@@ -89,13 +89,20 @@ a {
   text-align: left;
 }
 
-/*Main page buttons*/
-#viande .alert {
-  background-color: #06a587;
+#index div.row {
+  padding-top: 30%;
+
 }
 
-#quote .alert {
-  background-color: #385a67;
+/*Main page buttons*/
+#match.alert {
+  background-color: #06a587;
+  border: none;
+}
+
+#quote.alert {
+  background-color: #99b8c9;
+  border: none;
 }
 
 /*Question buttons styles*/
