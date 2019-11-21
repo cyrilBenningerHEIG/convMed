@@ -127,9 +127,7 @@ a {
 .img-reponse {
   width: 60%;
 }
-.img-fluid {
-  width: 50%;
-}
+
 
 .redBack {
   background-color: #b54c27;
@@ -193,13 +191,13 @@ h1 {
 }
 
 .arrow {
-  width: 12rem;
+  width: 8rem;
   margin-top: -10rem;
   z-index: 3;
   margin-left: 40%;
 }
 
 
-.img-fluid {
-  width: 80%;
+.img-size {
+  width: 60%;
 }
