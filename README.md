@@ -1,5 +1,5 @@
 <a href="https://www.instagram.com/greenmind_m46">
-<img src="https://convmed.herokuapp.com/img/frontend/logo-greenmind.svg">
+<img src="https://convmed.herokuapp.com/img/frontend/greenmind-logo.gif">
 </a>
 <h2 align="center">
   <a href="https://convmed.herokuapp.com/">
