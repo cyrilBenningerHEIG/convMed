@@ -12,13 +12,9 @@ router.get('/question', function(req, res, next) {
 });
 
 /* GET reponse page -VRAI */
-router.get('/reponseVRAI', function(req, res, next) {
-  res.render('reponseVRAI', { vraiVar: 'VRAI'});
+router.get('/reponse', function(req, res, next) {
+  res.render('reponse', { vraiVar: 'VRAI'});
 });
 
-/* GET reponse page -VRAI */
-router.get('/reponseFAUX', function(req, res, next) {
-  res.render('reponseFAUX', { fauxVar: 'FAUX'});
-});
 
 module.exports = router;
