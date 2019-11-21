@@ -15,7 +15,8 @@ router.get('/', function (req, res, next) {
 // });
 
 /* GET reponse page */
-router.get('/reponse', function (req, res, next) {
+router.get('/reponse', async function (req, res, next) {
+  question = await Quiz.find({ type: true }).sort("_id");
 
   res.render('reponse', { reponseFaux: true, vraiVar: 'Vrai', fauxVar: 'Faux' });
 });
@@ -24,14 +25,7 @@ router.get('/reponse', function (req, res, next) {
   router.get('/ksekse', function (req, res, next) {
     res.render('ksekse');
   });
-
-
-  /* GET reponse page -VRAI */
-  router.get('/reponseFAUX', function (req, res, next) {
-    res.render('reponseFAUX', { fauxVar: 'FAUX' });
-  });
   router.get('/match', async function (req, res, next) {
-
     question = await Quiz.find({ type: true }).sort("_id");
     var counter = null;
     var LocalStorage = require('node-localstorage').LocalStorage,
