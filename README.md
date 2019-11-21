@@ -1,5 +1,7 @@
 # Matche ta viande & Devine l'auteur – M46 HEIG-VD
 
+Fonctionne grâce au framework Express
+
 ### Matche ta viande, un jeu qui donne faim, ou pas. 
 Ce jeu à pour but de vous faire réfléchir sur la nature de vos choix de viandes. 
   
