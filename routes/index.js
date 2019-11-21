@@ -5,17 +5,17 @@ const router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { gameTitle1: 'Matche ta viande', gameTitle2: 'Devine l\'auteur'  });
+  res.render('index', { gameTitle1: 'Matche ta viande', gameTitle2: 'Devine l\'auteur' });
 });
 
 /* GET question page. */
 router.get('/question', function(req, res, next) {
-  res.render('question', { qNumber: 'Q', reponse1: 'Canard', reponse2: 'Poulet', reponse3: 'Boeuf', reponse4: 'Porc' });
+  res.render('question', { typeQuiz: true, qContent:'myCitation' qNumber: 'Q', reponse1: 'Canard', reponse2: 'Poulet', reponse3: 'Boeuf', reponse4: 'Porc' });
 });
 
 /* GET reponse page */
 router.get('/reponse', function(req, res, next) {
-  res.render('reponse', { reponseFaux: true});
+  res.render('reponse', { reponseFaux: false});
 });
 
 

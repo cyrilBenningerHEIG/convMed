@@ -2,32 +2,53 @@ extends layout
 
 block content
   div#question.container
-    h1= myVar
-    img.img-fluid(src='img/meat/quest/poulet.jpg', alt='Responsive image')
-    div.row
-      div.col-md-6
-        div.questionButton
-          a(href='#') 
-            img.img-fluid(src='img/frontend/button-layout-A.svg', alt='Responsive image') 
-            span= reponse1
-
-      div.col-md-6
-        div.questionButton
-          a(href='#')
-            img.img-fluid(src='img/frontend/button-layout-B.svg', alt='Responsive image')
-            span= reponse2
-    div.row
-      div.col-md-6
-        div.questionButton
-          a(href='#')
-            img.img-fluid(src='img/frontend/button-layout-C.svg', alt='Responsive image')
-            span= reponse3
-          //a.btn.btn-reponse(href='#', role='button') Boeuf
-          //button.btn.btn-reponse(type='submit') Boeuf
-      div.col
-        div.questionButton
-          a(href='#')
-            img.img-fluid(src='img/frontend/button-layout-D.svg', alt='Responsive image')
-            span= reponse4
-    
-          
+    h1 Q
+    if typeQuiz 
+      img.img-fluid(src='img/meat/quest/poulet.jpg', alt='Responsive image') 
+      div.row
+        div.col-md-6
+          div.questionButton
+            a(href='#') 
+              img.img-fluid(src='img/frontend/button-layout-A.svg', alt='Responsive image') 
+              span= reponse1
+        div.col-md-6
+          div.questionButton
+            a(href='#')
+              img.img-fluid(src='img/frontend/button-layout-B.svg', alt='Responsive image')
+              span= reponse2
+      div.row
+        div.col-md-6
+          div.questionButton
+            a(href='#')
+              img.img-fluid(src='img/frontend/button-layout-C.svg', alt='Responsive image')
+              span= reponse3
+        div.col-md-6
+          div.questionButton
+            a(href='#')
+              img.img-fluid(src='img/frontend/button-layout-D.svg', alt='Responsive image')
+              span= reponse4      
+    else 
+      div.text-center
+        p= qContent
+      div.row
+        div.col-md-6
+          div.questionButton
+            a(href='#') 
+              img.img-fluid(src='img/frontend/button-layout-A.svg', alt='Responsive image') 
+              span= reponse1
+        div.col-md-6
+          div.questionButton
+            a(href='#')
+              img.img-fluid(src='img/frontend/button-layout-B.svg', alt='Responsive image')
+              span= reponse2
+      div.row
+        div.col-md-6
+          div.questionButton
+            a(href='#')
+              img.img-fluid(src='img/frontend/button-layout-C.svg', alt='Responsive image')
+              span= reponse3
+        div.col-md-6
+          div.questionButton
+            a(href='#')
+              img.img-fluid(src='img/frontend/button-layout-D.svg', alt='Responsive image')
+              span= reponse4
