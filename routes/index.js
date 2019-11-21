@@ -13,10 +13,11 @@ router.get('/question', function(req, res, next) {
   res.render('question', { qNumber: 'Q', reponse1: 'Canard', reponse2: 'Poulet', reponse3: 'Boeuf', reponse4: 'Porc' });
 });
 
-/* GET reponse page -VRAI */
-router.get('/reponseVRAI', function(req, res, next) {
-  res.render('reponseVRAI', { vraiVar: 'VRAI'});
+/* GET reponse page */
+router.get('/reponse', function(req, res, next) {
+  res.render('reponse', { reponseFaux: true});
 });
+
 
 /* GET reponse page -VRAI */
 router.get('/reponseFAUX', function(req, res, next) {
@@ -46,5 +47,6 @@ async function GetData(typeQuiz){
   
   return question;
 } 
+
 
 module.exports = router;

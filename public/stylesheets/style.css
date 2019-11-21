@@ -129,3 +129,16 @@ a {
 img {
   width: 850px;
 }
+
+
+.redBack {
+  background-color: red;
+}
+
+.greenBack {
+  background-color: green;
+}
+
+.greenBack .col-md-8 {
+  text-align: center;
+}
