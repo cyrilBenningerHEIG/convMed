@@ -1,12 +1,51 @@
 @font-face {
-  font-family: 'CaviarDreams';
-  src: url('fonts/caviar_dreams/CaviarDreams.ttf'), format('truetype')
-
+    font-family: 'Caviar Dreams';
+    src: url('fonts/CaviarDreams.eot');
+    src: url('fonts/CaviarDreams.eot?#iefix') format('embedded-opentype'),
+         url('fonts/CaviarDreams.woff2') format('woff2'),
+         url('fonts/CaviarDreams.woff') format('woff'),
+         url('fonts/CaviarDreams.ttf')  format('truetype'),
+         url('fonts/CaviarDreams.svg#Caviar Dreams') format('svg');
 }
+
+@font-face {
+    font-family: 'Caviar Dreams bold';
+    src: url('fonts/CaviarDreamsBold.eot');
+    src: url('fonts/CaviarDreamsBold.eot?#iefix') format('embedded-opentype'),
+         url('fonts/CaviarDreamsBold.woff2') format('woff2'),
+         url('fonts/CaviarDreamsBold.woff') format('woff'),
+         url('fonts/CaviarDreamsBold.ttf')  format('truetype'),
+         url('fonts/CaviarDreamsBold.svg#Caviar Dreams') format('svg');
+         font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Caviar Dreams italic';
+    src: url('fonts/CaviarDreamsItalic.eot');
+    src: url('fonts/CaviarDreamsItalic.eot?#iefix') format('embedded-opentype'),
+         url('fonts/CaviarDreamsItalic.woff2') format('woff2'),
+         url('fonts/CaviarDreamsItalic.woff') format('woff'),
+         url('fonts/CaviarDreamsItalic.ttf')  format('truetype'),
+         url('fonts/CaviarDreamsItalic.svg#Caviar Dreams') format('svg');
+         font-style: italic, oblique;
+}
+
+@font-face {
+    font-family: 'Caviar Dreams bold italic';
+    src: url('fonts/CaviarDreamsBoldItalic.eot');
+    src: url('fonts/CaviarDreamsBoldItalic.eot?#iefix') format('embedded-opentype'),
+         url('fonts/CaviarDreamsBoldItalic.woff2') format('woff2'),
+         url('fonts/CaviarDreamsBoldItalic.woff') format('woff'),
+         url('fonts/CaviarDreamsBoldItalic.ttf')  format('truetype'),
+         url('fonts/CaviarDreamsBoldItalic.svg#Caviar Dreams') format('svg');
+         font-style: italic, oblique;
+}
+
+
 
 html, body, div, span, h1, h2, h3, h4, h5, h6, p, a {
     font:inherit;
-    font-family: CaviarDreams;
+    font-family: Caviar Dreams;
 }
 
 body {
