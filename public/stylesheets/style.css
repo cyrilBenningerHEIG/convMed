@@ -132,11 +132,10 @@ a {
 
 
 .img-reponse {
-  width: 60%;
+  width: 100%;
+  padding-bottom: 6rem;
 }
-.img-fluid {
-  width: 80%;
-}
+
 
 .redBack {
   background-color: #b54c27;
@@ -200,13 +199,13 @@ h1 {
 }
 
 .arrow {
-  width: 12rem;
-  margin-top: -10rem;
+  width: 8rem;
+  margin-top: -14rem;
   z-index: 3;
-  margin-left: 40%;
+  margin-left: 35%;
 }
 
 
-.img-fluid {
-  width: 80%;
+.img-size {
+  width: 60%;
 }
