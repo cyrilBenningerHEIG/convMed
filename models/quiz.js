@@ -17,4 +17,5 @@ const quizSchema = new Schema({
 function getData() {
   return Quiz.find();
 }
+
 module.exports = mongoose.model('Quiz', quizSchema); 

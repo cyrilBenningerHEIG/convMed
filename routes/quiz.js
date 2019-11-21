@@ -1,20 +1,23 @@
-var express = require('express');
-var router = express.Router();
+
 const Quiz = require('../models/quiz');
-module.exports = router;
 
 
 const express = require('express');
 const router = express.Router();
 
-
+/*
 router.get('/', (req, res) => {
   res.send('Api router');
 });
+*/
 
-router.get('/data', dataHandler)
 
-module.exports = router;
+router.get('/data', dataHandler, function(req, res, next) {
+  res.render('index', { title: 'Express' });
+});
+
+
+
 
 function dataHandler(req, res) {
   getData()
@@ -22,3 +25,5 @@ function dataHandler(req, res) {
       res.json(data);
     });
 }
+
+module.exports = router;
