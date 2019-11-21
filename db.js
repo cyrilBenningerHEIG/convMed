@@ -9,7 +9,7 @@ function startDb() {
     useNewUrlParser: true,
   })
   .then(() => console.log('Mongodb successully connected'))
-  .catch(err => console.log(err));
+  .catch(err => console.log(err)),
 }
 
 function closeDb() {
