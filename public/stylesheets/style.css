@@ -125,7 +125,8 @@ a {
 
 
 .img-reponse {
-  width: 60%;
+  width: 100%;
+  padding-bottom: 6rem;
 }
 
 
@@ -192,9 +193,9 @@ h1 {
 
 .arrow {
   width: 8rem;
-  margin-top: -10rem;
+  margin-top: -14rem;
   z-index: 3;
-  margin-left: 40%;
+  margin-left: 35%;
 }
 
 
