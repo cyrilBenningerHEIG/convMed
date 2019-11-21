@@ -123,8 +123,16 @@ a {
   font-weight: bold;
 }
 
+<<<<<<< HEAD
 .img-reponse {
   width: 60%;
+=======
+
+.img-fluid {
+ 
+  width: 60%;
+
+>>>>>>> f686917f00d3eea5028eafd61a8448ba25767e24
 }
 
 .redBack {
