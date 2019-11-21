@@ -49,10 +49,18 @@ app.use(function(err, req, res, next) {
 
 console.log(startDb);
 startDb()
+
   .then(() => {
     app.listen(8000, () => {
       console.log('App is listening on port 8000');
     });
   });
+
+  // .once('open', () => {
+  //   app.listen(8000, () => {
+  //     console.log('App is listening on port 8000');
+  //   });
+  // });
+
 
 module.exports = app;
