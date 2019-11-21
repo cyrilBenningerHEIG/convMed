@@ -3,7 +3,7 @@ extends layout
 block content
   div#question.container
     if type 
-      img.img-fluid(src='img/meat/quest/poulet.jpg', alt='Responsive image') 
+      img.img-fluid(src="#{contenu}", alt='Responsive image') 
       div.row
         div.col-md-6
           div.questionButton
@@ -28,7 +28,7 @@ block content
               span= reponse4      
     else 
       div.text-center
-        p= 'hello'
+        p= contenu
       div.row
         div.col-md-6
           div.questionButton
