@@ -25,7 +25,7 @@ router.get('/reponseFAUX', function(req, res, next) {
 });
 router.get('/match', async function (req, res, next) {
     question = await Quiz.find({type:true}).sort("_id");
-    res.render('question',{ qNumber: 'Q', reponse1: question[0].repjuste, reponse2: question[0].repfausse1, reponse3: question[0].repfausse2, reponse4: question[0].repfausse3 ,type:question.type})
+    res.render('question',{ qNumber: 'Q', reponse1: question[0].repjuste, reponse2: question[0].repfausse1, reponse3: question[0].repfausse2, reponse4: question[0].repfausse3 ,type:question[0].type,contenu:question[0].questionimg})
     //res.send(question);
 });
 
