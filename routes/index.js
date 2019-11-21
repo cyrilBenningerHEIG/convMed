@@ -18,6 +18,11 @@ router.get('/reponseVRAI', function(req, res, next) {
   res.render('reponseVRAI', { vraiVar: 'VRAI'});
 });
 
+/* GET reponse page -KSEKSE */
+router.get('/ksekse', function(req, res, next) {
+  res.render('ksekse');
+});
+
 /* GET reponse page -VRAI */
 router.get('/reponseFAUX', function(req, res, next) {
   res.render('reponseFAUX', { fauxVar: 'FAUX'});
@@ -39,6 +44,5 @@ router.get('/seed', function (req, res, next) {
   Quiz.create(seed);
   res.send(seed);
 });
-
 
 module.exports = router;
