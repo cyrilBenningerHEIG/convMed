@@ -23,7 +23,7 @@ router.get('/seed', function (req, res, next) {
   res.send(seed);
 });
 
-
+console.log(Quiz.find);
 function getData() {
   return Quiz.find();
 }
