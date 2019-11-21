@@ -55,6 +55,7 @@ body {
   background-color: #3e5966;
   width: 100%;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
 }
 
 #index.container {
@@ -130,7 +131,13 @@ a {
 
 
 .img-fluid {
+<<<<<<< HEAD
   width: 80%;
+=======
+ 
+  width: 60%;
+
+>>>>>>> c791ed6e16f2d6be33581f369e00476e4054fafc
 }
 
 
@@ -197,3 +204,12 @@ h1 {
   padding-left: 30%;
   margin-top: -30px;
 }
+
+
+.arrow{
+  width: 12rem;
+  margin-top: -10rem;
+  z-index: 3;
+  margin-left: 40%;
+}
+

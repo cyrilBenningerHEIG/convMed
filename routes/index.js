@@ -17,7 +17,7 @@ router.get('/', function (req, res, next) {
 /* GET reponse page */
 router.get('/reponse', function (req, res, next) {
 
-  res.render('reponse', { reponseFaux: false, vraiVar: 'Vrai', fauxVar: 'Faux' });
+  res.render('reponse', { reponse: true, vraiVar: 'Vrai', fauxVar: 'Faux' });
 });
 
   /* GET reponse page -KSEKSE */
@@ -36,13 +36,13 @@ router.get('/reponse', function (req, res, next) {
     var counter = null;
     var LocalStorage = require('node-localstorage').LocalStorage,
       localStorage = new LocalStorage('./scratch');
-    if (localStorage.getItem("count") == null || localStorage.getItem("count") >= 9) {
-      counter = localStorage.setItem("count", 0);
+    if (localStorage.getItem("countMeat") == null || localStorage.getItem("countMeat") >= 9) {
+      counter = localStorage.setItem("countMeat", 0);
       counters = 0;
     } else {
-      counters = parseInt(localStorage.getItem("count"));
+      counters = parseInt(localStorage.getItem("countMeat"));
       counters++;
-      counter = localStorage.setItem("count", counters);
+      counter = localStorage.setItem("countMeat", counters);
     }
     console.log(counters)
     res.render('question', { qNumber: 'Q', reponse1: question[counters].repjuste, reponse2: question[counters].repfausse1, reponse3: question[counters].repfausse2, reponse4: question[counters].repfausse3, type: question[counters].type, contenu: question[counters].questionimg })
@@ -51,7 +51,18 @@ router.get('/reponse', function (req, res, next) {
 
   router.get('/quote', async function (req, res, next) {
     question = await Quiz.find({ type: false }).sort("_id");
-    res.render('question', { qNumber: 'Q', reponse1: question[0].repjuste, reponse2: question[0].repfausse1, reponse3: question[0].repfausse2, reponse4: question[0].repfausse3, type: question[0].type, contenu: question[0].questiontxt })
+    var counterQuote = null;
+    var LocalStorage = require('node-localstorage').LocalStorage,
+      localStorage = new LocalStorage('./scratch');
+    if (localStorage.getItem("countQuote") == null || localStorage.getItem("countQuote") >= 9) {
+      counterQuote = localStorage.setItem("countQuote", 0);
+      countersQuote = 0;
+    } else {
+      countersQuote = parseInt(localStorage.getItem("countQuote"));
+      countersQuote++;
+      counterQuote = localStorage.setItem("countQuote", countersQuote);
+    }
+    res.render('question', { qNumber: 'Q', reponse1: question[countersQuote].repjuste, reponse2: question[countersQuote].repfausse1, reponse3: question[countersQuote].repfausse2, reponse4: question[countersQuote].repfausse3, type: question[countersQuote].type, contenu: question[countersQuote].questiontxt })
     //res.send(question);
   });
 
@@ -64,5 +75,4 @@ router.get('/reponse', function (req, res, next) {
     res.send(seed);
   });
 
-
-  module.exports = router;
+module.exports = router;
