@@ -15,14 +15,10 @@ router.get('/question', function(req, res, next) {
 
 /* GET reponse page */
 router.get('/reponse', function(req, res, next) {
-  res.render('reponse', { reponseFaux: true});
+  res.render('reponse', { reponseFaux: true, vraiVar:'Vrai', fauxVar:'Faux'});
 });
 
 
-/* GET reponse page -VRAI */
-router.get('/reponseFAUX', function(req, res, next) {
-  res.render('reponseFAUX', { fauxVar: 'FAUX'});
-});
 router.get('/match', function (req, res, next) {
   let question=Quiz.find({type:'1'}).exec();
   res.json(question);
