@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  div.container-fluid
+    div.row
+      div.col-md-6
+        h1= vraiVar
+      div.col-md-6
+        p Consommation 
+    div.row
+      div.col-md-6
+        p Poulet
+      div.col-md-6
+        p Infographie
+    
+    if reponseFaux 
+      div.row.redBack.d-flex.justify-content-center
+        div.col-md-8
+          img.img-fluid(src='img/meat/rep/poulet.jpg', alt='Responsive image')
+          // arrow "GO to the next Question"
+          a(href='#') 
+            img.img-fluid(src='img/frontend/button-arrow-FAUX.svg', alt='Responsive image') 
+          // ligne de source de l'info
+    else 
+      div.row.greenBack.d-flex.justify-content-center
+        div.col-md-8
+          img.img-fluid(src='img/meat/rep/poulet.jpg', alt='Responsive image')
+          // arrow "GO to the next Question"
+          a(href='#') 
+            img.img-fluid(src='img/frontend/button-arrow-VRAI.svg', alt='Responsive image') 
+          // ligne de source de l'info
+  

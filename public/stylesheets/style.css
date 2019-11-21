@@ -52,6 +52,7 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a {
 body {
   /*max-width: 100vh;*/
   /*max-height: 100vh;*/
+  width: 100%;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -128,4 +129,17 @@ a {
 
 img {
   width: 850px;
+}
+
+
+.redBack {
+  background-color: red;
+}
+
+.greenBack {
+  background-color: green;
+}
+
+.greenBack .col-md-8 {
+  text-align: center;
 }
