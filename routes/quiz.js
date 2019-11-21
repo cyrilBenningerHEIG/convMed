@@ -12,12 +12,14 @@ router.get('/', (req, res) => {
 */
 
 
-router.get('/data', dataHandler, function(req, res, next) {
+router.get('/', dataHandler, function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
 
-
+function getData() {
+  return Quiz.find();
+}
 
 function dataHandler(req, res) {
   getData()
@@ -25,5 +27,6 @@ function dataHandler(req, res) {
       res.json(data);
     });
 }
+
 
 module.exports = router;
