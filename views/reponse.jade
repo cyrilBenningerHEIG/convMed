@@ -3,7 +3,7 @@ extends layout
 block content
 
 
- if reponseFaux 
+ if reponse 
 
   div#reponse.container-fluid.greenBack
     div.row.justify-content-center.align-items-end
@@ -20,7 +20,7 @@ block content
     
 
       div.row.d-flex.justify-content-center
-        div.col-md-8
+        div.col-md-8.text-center
           img.img-fluid(src='img/meat/rep/poulet.jpg', alt='Responsive image')
           // arrow "GO to the next Question"
           
@@ -47,7 +47,7 @@ block content
     
 
       div.row.d-flex.justify-content-center
-        div.col-md-8
+        div.col-md-8.text-center
           img.img-fluid(src='img/meat/rep/poulet.jpg', alt='Responsive image')
          
           // ligne de source de l'info
@@ -55,4 +55,3 @@ block content
 
              a(href='#') 
             img.arrow.img-fluid(src='img/frontend/button-arrow-FAUX.svg', alt='Responsive image')
-

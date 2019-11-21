@@ -17,7 +17,7 @@ router.get('/', function (req, res, next) {
 /* GET reponse page */
 router.get('/reponse', function (req, res, next) {
 
-  res.render('reponse', { reponse: false, vraiVar: 'Vrai', fauxVar: 'Faux' });
+  res.render('reponse', { reponse: true, vraiVar: 'Vrai', fauxVar: 'Faux' });
 });
 
   /* GET reponse page -KSEKSE */
