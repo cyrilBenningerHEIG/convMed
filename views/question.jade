@@ -2,8 +2,7 @@ extends layout
 
 block content
   div#question.container
-    h1 Q
-    if typeQuiz 
+    if type 
       img.img-fluid(src='img/meat/quest/poulet.jpg', alt='Responsive image') 
       div.row
         div.col-md-6
@@ -29,7 +28,7 @@ block content
               span= reponse4      
     else 
       div.text-center
-        p= qContent
+        p= 'hello'
       div.row
         div.col-md-6
           div.questionButton
