@@ -26,7 +26,6 @@ router.get('/seed', function (req, res, next) {
   res.send(seed);
 });
 
-
 function getData() {
   return Quiz.find();
 }

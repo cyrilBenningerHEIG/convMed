@@ -128,23 +128,24 @@ a {
   font-weight:bold;
 }
 
-img {
-  width: 850px;
+.img-fluid {
+  width: 100%;
 }
 
 
 .redBack {
-  background-color: red;
+  background-color: #b54c27;
 }
 
 .greenBack {
-  background-color: green;
+  background-color: #00a586;
 }
 
 .greenBack .col-md-8 {
   text-align: center;
 }
 
+<<<<<<< HEAD
 #quote .jumbotron{
   background-color: transparent;
   font-size: 48px;
@@ -170,3 +171,29 @@ img {
   box-shadow: none;
   font-weight:bold;
 }
+=======
+.repText{
+  font-size: 120px;
+}
+
+h1 {
+  font-family: Caviar Dreams bold;
+  font-size: 10rem;
+  color: white;
+
+}
+
+#consommation {
+  font-family: Caviar Dreams bold;
+  font-size: 4rem;
+  color: white;
+}
+
+#animal{
+  font-family: Caviar Dreams;
+  font-size: 3rem;
+  color: white; 
+  padding-left: 30%;
+  margin-top: -30px;
+}
+>>>>>>> 23558fc7c51619c11476df45d73b2dab591cf29b
