@@ -54,5 +54,4 @@ async function GetData(typeQuiz){
   return question;
 }
 
-
 module.exports = router;
