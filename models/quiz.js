@@ -2,12 +2,12 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const quizSchema = new Schema({
-    question_txt : String, 
-    question_img : String,
-    rep_juste : String,
-    rep_fausse1 : String, 
-    rep_fausse2 : String, 
-    rep_fausse3 : String, 
+    questiontxt : String, 
+    questionimg : String,
+    repjuste : String,
+    repfausse1 : String, 
+    repfausse2 : String, 
+    repfausse3 : String, 
     info : String, 
     info2 : String, 
     type : Boolean
