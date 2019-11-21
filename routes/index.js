@@ -1,9 +1,11 @@
-var express = require('express');
-var router = express.Router();
+const Quiz = require('../models/quiz');
+const express = require('express');
+const { data } = require('../Seed/data');
+const router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { gameTitle1: 'Matche ta viande', gameTitle2: 'Devine lauteur'  });
+  res.render('index', { gameTitle1: 'Matche ta viande', gameTitle2: 'Devine l\'auteur'  });
 });
 
 /* GET question page. */
@@ -20,5 +22,23 @@ router.get('/reponseVRAI', function(req, res, next) {
 router.get('/reponseFAUX', function(req, res, next) {
   res.render('reponseFAUX', { fauxVar: 'FAUX'});
 });
+router.get('/match', function (req, res, next) {
+  let question=Quiz.find({type:'1'}).exec();
+  res.json(question);
+  //res.render('index', { title: 'Express' });
+});
+router.get('/Citations', function (req, res, next) {
+  res.render('index', { title: 'Express' });
+});
+
+router.get('/seed', function (req, res, next) {
+  Quiz.remove({}, function (err) {
+    console.log('collection removed')
+  });
+  let seed = data;
+  Quiz.create(seed);
+  res.send(seed);
+});
+
 
 module.exports = router;

@@ -10,7 +10,10 @@ router.get('/', (req, res) => {
 */
 
 
-router.get('/', dataHandler, function (req, res, next) {
+router.get('/MatchTaViande', dataHandler, function (req, res, next) {
+  res.render('index', { title: 'Express' });
+});
+router.get('/Citations', dataHandler, function (req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
