@@ -1,7 +1,18 @@
 doctype html
 html
   head
-    title= title
+    link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
+    script(src='/bootstrap/js/bootstrap.min.js')
+    
   body
+    div.top
+      nav.navbar.navbar-light.bg-light
+        a.navbar-brand(href='#')
+          img(src='/images/logo-greenmind.svg', width='200', height='60', alt='logo')
+    
     block content
+      
+    div.footer
