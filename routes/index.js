@@ -36,7 +36,7 @@ router.get('/reponse', function (req, res, next) {
     var counter = null;
     var LocalStorage = require('node-localstorage').LocalStorage,
       localStorage = new LocalStorage('./scratch');
-    if (localStorage.getItem("count") == null || localStorage.getItem("count") >= 9) {
+    if (localStorage.getItem("count") == null || localStorage.getItem("count") >= question.length) {
       counter = localStorage.setItem("count", 0);
       counters = 0;
     } else {
