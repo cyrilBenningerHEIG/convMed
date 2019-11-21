@@ -17,4 +17,3 @@ function closeDb() {
 }
 
 module.exports = { startDb }
-

@@ -1,5 +1,18 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div#index.container
+    table.table.borderless
+      tbody
+        tr
+          td#viande 
+            div.alert.alert-primary(role='alert')
+              | #{gameTitle1}
+            
+          td#quote 
+            div.alert.alert-primary(role='alert')
+              | #{gameTitle2}
+
+
+
+  
