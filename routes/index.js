@@ -25,11 +25,6 @@ router.get('/reponse', function (req, res, next) {
     res.render('ksekse');
   });
 
-
-  /* GET reponse page -VRAI */
-  router.get('/reponseFAUX', function (req, res, next) {
-    res.render('reponseFAUX', { fauxVar: 'FAUX' });
-  });
   router.get('/match', async function (req, res, next) {
     console.log("HAHAH");
 
