@@ -75,8 +75,8 @@ a {
   height: 60px;
   z-index: 4;
   background: none;
-  font-size: 48px;
-  line-height: 48px;
+  font-size: 56px;
+  line-height: 125px;
   color: #f5f5f5;
   text-shadow: none;
   border: none;
@@ -84,4 +84,8 @@ a {
   border-bottom-color: transparent;
   box-shadow: none;
   font-weight:bold;
+}
+
+img {
+  width: 850px;
 }
