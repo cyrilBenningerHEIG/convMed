@@ -52,6 +52,7 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a {
 body {
   /*max-width: 100vh;*/
   /*max-height: 100vh;*/
+  background-color: #3e5966;
   width: 100%;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
@@ -108,7 +109,7 @@ a {
   padding: 3em;
 }
 
-.questionButton span {
+#match .row .questionButton span {
   position: absolute;
   margin-left: -50%;
   margin-right: auto;
@@ -127,19 +128,80 @@ a {
   font-weight:bold;
 }
 
-img {
-  width: 850px;
+.img-fluid {
+  width: 100%;
 }
 
 
 .redBack {
-  background-color: red;
+  background-color: #b54c27;
 }
 
 .greenBack {
-  background-color: green;
+  background-color: #00a586;
 }
 
 .greenBack .col-md-8 {
   text-align: center;
 }
+
+
+#quote .jumbotron{
+  background-color: transparent;
+  font-size: 48px;
+  color: #f5f5f5;
+}
+
+
+#quote .row .questionButton span {
+  position: absolute;
+  margin-left: -60%;
+  margin-right: auto;
+  width: 350px;
+  height: 350px;
+  z-index: 4;
+  background: none;
+  font-size: 48px;
+  /*line-height: 350px;*/
+  color: #f5f5f5;
+  text-shadow: none;
+  border: none;
+  border-color: transparent;
+  border-bottom-color: transparent;
+  box-shadow: none;
+  font-weight:bold;
+}
+
+.repText{
+  font-size: 120px;
+}
+
+h1 {
+  font-family: Caviar Dreams bold;
+  font-size: 10rem;
+  color: white;
+
+}
+
+#consommation {
+  font-family: Caviar Dreams bold;
+  font-size: 4rem;
+  color: white;
+}
+
+#animal{
+  font-family: Caviar Dreams;
+  font-size: 3rem;
+  color: white;
+  padding-left: 30%;
+  margin-top: -30px;
+}
+
+
+.arrow{
+  width: 12rem;
+  margin-top: -10rem;
+  z-index: 3;
+  margin-left: 60%;
+}
+
