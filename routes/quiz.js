@@ -1,13 +1,13 @@
-const Quiz = require('../models/quiz');
+/*const Quiz = require('../models/quiz');
 const express = require('express');
 const { data } = require('../Seed/data');
 const router = express.Router();
 
-/*
+
 router.get('/', (req, res) => {
   res.send('Api router');
 });
-*/
+
 
 
 router.get('/MatchTaViande', dataHandler, function (req, res, next) {
@@ -26,7 +26,6 @@ router.get('/seed', function (req, res, next) {
   res.send(seed);
 });
 
-
 function getData() {
   return Quiz.find();
 }
@@ -40,3 +39,4 @@ function dataHandler(req, res) {
 
 
 module.exports = router;
+*/

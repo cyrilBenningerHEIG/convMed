@@ -12,7 +12,7 @@ const mongoose = require('mongoose');
 mongoose.Promise = Promise;
 
 var indexRouter = require('./routes/index');
-var quizRouter = require('./routes/quiz');
+
 
 
 // view engine setup
@@ -26,7 +26,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/quiz', quizRouter);
+
 
 
 // catch 404 and forward to error handler
