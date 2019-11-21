@@ -48,8 +48,6 @@ router.get('/seed', function (req, res, next) {
   res.send(seed);
 });
 
-<<<<<<< HEAD
-=======
 async function GetData(typeQuiz){
   let question = await Quiz.find({type:typeQuiz});
 
@@ -57,5 +55,4 @@ async function GetData(typeQuiz){
 }
 
 
->>>>>>> 7fc7ed41e4a41e2bb76d72b69ca67b10d92cb6c8
 module.exports = router;
