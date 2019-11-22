@@ -20,7 +20,7 @@ router.get('/', function (req, res, next) {
 /* GET reponse page */
 router.get('/reponse', function (req, res, next) {
 
-  res.render('reponse', { reponse: true, vraiVar: 'Vrai', fauxVar: 'Faux' });
+  res.render('reponse', { reponse: true, jeu: 'match', contenuTitle: 'title', contenuInfo: 'C\'est une citation tirée du discours percutant de Greta Thunberg qui fait face aux plus grands hommes politiques lors d\'un sommet de l\'ONU, où elle dénonce les inactions des dirigeants.', contenuImg: 'img/meat/rep/poulet.jpg', contenuSrc: 'source info' });
 });
 
   /* GET reponse page -KSEKSE */
