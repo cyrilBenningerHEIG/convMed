@@ -31,7 +31,7 @@ const data = [
         "answers": [ "Jean-Claude Juncker", "Gandhi", "Boris Johnson", "Leonardo DiCaprio"],
         "repphoto": "img/quote/leo.jpg",
         "info2": 2016,
-        "info": "Cette citation est tirée du film Before The Flood. Il a été réalisé par DiCaprio qui est un activiste pour l'écologie (2016)",
+        "info": "Cette citation est tirée du film Before The Flood. Il a été réalisé par l'acteur DiCaprio qui est également un activiste écologique (2016).",
         "type": 0
     },
     {
@@ -49,6 +49,7 @@ const data = [
         "answers": [ "Dalaï Lama", "Adèle Thorens", "Mike Horn", "Victor Hugo"],
         "repphoto": "img/quote/hugo.jpeg",
         "info2": "XIXe siècle",
+        "info" : "Cette phrase a été écrite par Victor Hugo, l'écrivain Français du XIXe siècle.",
         "type": 0
     },
     {
@@ -65,6 +66,7 @@ const data = [
         "repjuste": "François Hollande",
         "answers": [ "Grand Corps Malade","Alain Morisod","Angela Merkel", "François Hollande"],
         "repphoto": "img/quote/holland.jpg",
+        "info2": 2015,
         "info": "François Hollande exprime ces mots en 2015, lors d'un discour au World Economic Forum de Davos.",
         "type": 0
     },
@@ -100,6 +102,7 @@ const data = [
         "repjuste": "Charles Darwin",
         "answers": [ "Arnold Schwarzenegger","Optimus Prime","Bill Gates","Charles Darwin"],
         "repphoto": "img/quote/darwin.jpg",
+        "info2": "XIXe siècle",
         "info": "C'est une phrase dite par Charles Darwin, naturaliste et paléontologue, qui accompagne bien sa théorie de sélection naturelle",
         "type": 0
     },
@@ -107,7 +110,7 @@ const data = [
         "questiontxt": "Nous n'héritons pas de la terre de nos parents, nous l'empruntons à nos enfants.",
         "repjuste": "Antoine de Saint-Exupéry",
         "answers": [ "Orelsan", "L'abbé Pierre", "Henri Dès",  "Antoine de Saint-Exupéry"],
-        "repphoto": "img/quote/adse.jpg",
+        "repphoto": "img/quote/asde.jpg",
         "info2": "début XXe siècle",
         "info": "Antoine de Saint Exupéry, écrivain et aviateur Français du 20ème siècle, a dit ces mots. Il est notamment connu pour son ouvrage Le Petit Prince",
         "type": 0
@@ -118,6 +121,7 @@ const data = [
         "answers": [ "Philippe Etchebest", "Bear Grylls", "Justin Bridou", "Geronimo"],
         "repphoto": "img/quote/geronimo.jpg",
         "info2": "XIXe siècle",
+        "info":"C'est un proverbe de Geronimo, chaman de la tribu apache Bedonkohe au XIXe siècle. ",
         "type": 0
     },
     {
@@ -126,6 +130,7 @@ const data = [
         "answers": [ "Alain Souchon", "Barack Obama", "Yann Marguet", "Jacques Chirac"],
         "repphoto": "img/quote/chirac.jpg",
         "info2": 2002,
+        "info" : "Jacques Chirac, président de la République française, a prononcé ces mots en ouverture de son discours devant l'assemblée plénière du IVe Sommet de la Terre le 2 septembre 2002 à Johannesburg, en Afrique du Sud.",
         "type": 0
     },
     {
@@ -134,6 +139,7 @@ const data = [
         "answers": [ "Renaud","Jean-Luc Mélenchon","Coluche","Philippe Geluck"],
         "repphoto": "img/quote/geluck.jpg",
         "info2": 2006,
+        "info" : "C'est une phrase de Philippe Geluck, auteur de la bande-dessinée Le Chat.",
         "type": 0
     },
     {
@@ -142,6 +148,7 @@ const data = [
         "answers": [ "Daenerys Targaryen","Mike Horn","Geronimo", "Benjamin Franklin"],
         "repphoto": "img/quote/franklin.jpeg",
         "info2": "XVIIIe siècle",
+        "info": "Ces mots sont attrribués à Benjamin Franklin, 6ème président de Pennsylvanie (XVIIIe siècle).",
         "type": 0
     },
     {
