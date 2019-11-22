@@ -16,9 +16,16 @@ router.get('/', function (req, res, next) {
 // });
 
 /* GET reponse page */
-router.get('/reponse', function (req, res, next) {
+var jeu = ''
+var quesitonType = 0
+if (quesitonType){
+  jeu = 'match'
+}else {jeu='quote'}
 
-  res.render('reponse', { reponse: true, vraiVar: 'Vrai', fauxVar: 'Faux' });
+
+router.get('/reponse', function (req, res, next) {
+  res.render('reponse', { reponse: false, jeu: jeu, contenuTitle: 'Greta Thunberg', contenuInfo: '14kg / personne / an', contenuImg: 'img/meat/rep/poulet.jpg', contenuSrc: 'source info' });
+
 });
 
   /* GET reponse page -KSEKSE */
