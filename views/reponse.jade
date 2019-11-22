@@ -6,7 +6,7 @@ block content
     div.row.justify-content-center.align-items-end
       div.col-md-4
 
-        h1.display-1= VRAI
+        h1.display-1 VRAI
       div.col-md-4.contenu-info
         p#consommation.blockquote= contenuInfo 
 
@@ -21,7 +21,7 @@ block content
           p= contenuSrc
       div.offset-8.col-4.mb-4
         button.btn
-          a(onclick='href="/#{jeu}"')
+          a(onclick='href="/question/#{type}/#{Number(numberQuestion)+1}"')
             img.arrow.img-fluid(src='/img/frontend/button-arrow-VRAI.svg', alt='Responsive image')
 
  else 
@@ -29,7 +29,7 @@ block content
     div.row.justify-content-center.align-items-end
       div.col-md-4
 
-        h1.display-1= FAUX
+        h1.display-1 FAUX
       div.col-md-4
         p#consommation.blockquote= contenuInfo 
     div.row.justify-content-center
@@ -43,5 +43,5 @@ block content
           p= contenuSrc
       div.offset-8.col-4-.mb-4
         button.btn
-          a(onclick='href="/#{jeu}"')
+          a(onclick='href="/question/#{type}/#{Number(numberQuestion)+1}"')
             img.arrow.img-fluid(src='/img/frontend/button-arrow-FAUX.svg', alt='Responsive image')
