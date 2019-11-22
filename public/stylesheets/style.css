@@ -95,7 +95,7 @@ a:active {
 #match.alert {
   background-color: #06a587;
   border: none;
-  min-width: 25em;
+  width: 25em;
   color: white;
   font-family: Caviar Dreams bold;
 }
@@ -103,7 +103,7 @@ a:active {
 #quote.alert {
   background-color: #99b8c9;
   border: none;
-  min-width: 25em;
+  width: 25em;
   color: white;
   font-family: Caviar Dreams bold;
 }
@@ -134,7 +134,7 @@ a:active {
 }
 
 .img-reponse {
-  width: 100%;
+  width: 80%;
   padding-bottom: 6rem;
 }
 
@@ -158,9 +158,9 @@ a:active {
 
 #quote .row .questionButton p {
  position: absolute;
-  margin-top: -25%;
-  margin-left: 20%;
-  width: 100%;
+  margin-top: -10%;
+  margin-left: 15%;
+  width: 80%;
   z-index: 4;
   background: none;
   line-height: auto;
@@ -198,7 +198,7 @@ h1 {
 .arrow {
   width: 8rem;
   margin-top: -18rem;
-  z-index: 3;
+  z-index: 9999;
   margin-left: 60%;
 }
 
@@ -220,25 +220,20 @@ h1 {
   #index.container {
     padding-top: 50%;
   }
-
   .questionButton {
     padding: 0;
     margin: 0.5em;
   }
-
-
-    .arrow {
-      width: 10rem;
-      margin-top: -60rem;
-      z-index: 3;
-      margin-left: -5rem;
-    }
-
-
-
+  .arrow {
+    width: 10rem;
+    margin-top: -60rem;
+    z-index: 3;
+    margin-left: -5rem;
+  }
   .img-size {
     width: 100%;
-
+  }
+  #quote .jumbotron {
+    padding: 0.3rem ;
   }
 }
-

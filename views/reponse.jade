@@ -1,19 +1,17 @@
 extends layout
 
 block content
- if reponse 
-  div#reponse.container-fluid.greenBack
-    div.row.justify-content-center.align-items-end
-      div.col-md-4
-
-        h1.display-1= VRAI
-      div.col-md-4.contenu-info
-        p#consommation.blockquote= contenuInfo 
-
-    div.row.justify-content-center
-      div.col-md-4
-        p#animal= contenuTitle
-      div.col-md-4
+  if reponse 
+    div#reponse.container-fluid.greenBack
+      div.row.justify-content-center.align-items-end
+        div.col-md-4
+          h1.display-1 VRAI
+        div.col-md-4.contenu-info
+          p#consommation.blockquote= contenuInfo 
+      div.row.justify-content-center
+        div.col-md-4
+          p#animal= contenuTitle
+        div.col-md-4
       div.row.d-flex.justify-content-center
         div.col-md-8.text-center
           img.img-reponse.img-fluid(src='/#{contenuImg}', alt='Responsive image')
@@ -23,19 +21,17 @@ block content
         button.btn
           a(onclick='href="/#{jeu}"')
             img.arrow.img-fluid(src='/img/frontend/button-arrow-VRAI.svg', alt='Responsive image')
-
- else 
-  div#reponse.container-fluid.redBack
-    div.row.justify-content-center.align-items-end
-      div.col-md-4
-
-        h1.display-1= FAUX
-      div.col-md-4
-        p#consommation.blockquote= contenuInfo 
-    div.row.justify-content-center
-      div.col-md-4
-        p#animal= contenuTitle
-      div.col-md-4
+  else 
+    div#reponse.container-fluid.redBack
+      div.row.justify-content-center.align-items-end
+        div.col-md-4
+          h1.display-1 FAUX
+        div.col-md-4
+          p#consommation.blockquote= contenuInfo 
+      div.row.justify-content-center
+        div.col-md-4
+          p#animal= contenuTitle
+        div.col-md-4
       div.row.d-flex.justify-content-center
         div.col-md-8.text-center
           img.img-reponse.img-fluid(src='/#{contenuImg}', alt='Responsive image')
