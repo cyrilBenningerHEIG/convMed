@@ -7,7 +7,8 @@ const quizSchema = new Schema({
     repjuste : String,
     repfausse1 : String, 
     repfausse2 : String, 
-    repfausse3 : String, 
+    repfausse3 : String,
+    repphoto : String, 
     info : String, 
     info2 : String, 
     type : Boolean
