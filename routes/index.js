@@ -7,7 +7,8 @@ var cookieParser = require('cookie-parser');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  res.render('index', { gameTitle1: 'Matche ta viande', gameTitle2: 'Devine l\'auteur' });
+  res.cookie("Score", 0);
+  res.render('index', { gameTitle1: 'Matche ta viande', gameTitle2: 'C\'est Kikadissa?' });
 });
 
 /* GET question page. */
@@ -22,9 +23,19 @@ router.get('/reponse/:id/:number/:answer', async function (req, res, next) {
   let number = req.params.number;
   let answer = req.params.answer;
   question = await Quiz.find({ type: id }).sort("_id");
-  console.log(question);
   let vrai = false;
   if (question[number].repjuste == answer) {
+    if (!req.headers.cookie) {
+      res.cookie("Score", 0);
+      userScore = 0;
+    } else {
+      cookies = req.headers.cookie;
+      var splitcookies = cookies.split(";");
+      var sliptedcookies = splitcookies[0].split("=");
+      var userScore = Number(sliptedcookies[1]);
+    }
+    userScore++;
+    res.cookie("Score", userScore);
     vrai = true
   }
   res.render('reponse', { reponse: vrai, contenuTitle: question[number].repjuste, contenuInfo: question[number].info, contenuImg: question[number].repphoto, contenuSrc: question[number].info2, type: id, numberQuestion: number });
@@ -40,13 +51,15 @@ router.get('/question/:id/:number', async (req, res, next) => {
   let idQuestion = req.params.id
   let numberQuestion = req.params.number
   question = await Quiz.find({ type: idQuestion }).sort("_id");
-  if (numberQuestion===question.length) {
-    res.render();
+  if (numberQuestion == question.length) {
+    cookies = req.headers.cookie;
+    var splitcookies = cookies.split(";");
+    var sliptedcookies = splitcookies[0].split("=");
+    var userScore = Number(sliptedcookies[1]);
+    res.render('fin', { Score: userScore, Total: question.length });
   }
-  console.log(question.length);
   let answer = question[numberQuestion].answers;
   answer = shuffle(answer);
-  console.log(answer)
   if (idQuestion == 1) {
     res.render('question', {
       qNumber: 'Q' + numberQuestion,

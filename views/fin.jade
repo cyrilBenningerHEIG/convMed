@@ -4,8 +4,10 @@ block content
   div#fin.container
     div.row.d-flex.justify-content-center
       div.col-12
-      	h1.display-4 Merci d'avoir participé à ce Quizz !
-      	p vous avet fait: INSERER VARIABLE réponses justes. 
-
-      	a(onclick='href="/index"')#match.alert.alert-primary.match(role='alert')
-        | #Retour au menu
+        h1.display-4 Merci d'avoir participé à ce Quizz !
+        h1.display-4 vous avez fait: #{Score}/#{Total}. 
+        br
+        br      
+        div.row.d-flex.justify-content-center
+          a(onclick='href="/"')#match.alert.alert-primary.match(role='alert')
+            | Retour au menu
