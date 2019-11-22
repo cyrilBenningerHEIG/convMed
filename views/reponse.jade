@@ -1,47 +1,43 @@
 extends layout
 
 block content
- if reponse 
-  div#reponse.container-fluid.greenBack
-    div.row.justify-content-center.align-items-end
-      div.col-md-4
-
-        h1.display-1 VRAI
-      div.col-md-4.contenu-info
-        p#consommation.blockquote= contenuInfo 
-
-    div.row.justify-content-center
-      div.col-md-4
-        p#animal= contenuTitle
-      div.col-md-4
+  if reponse 
+    div#reponse.container-fluid.greenBack
+      div.row.justify-content-center.align-items-end
+        div.col-md-4
+          h1.display-1 VRAI
+        div.col-md-4.contenu-info
+          p#consommation.blockquote.align-middle= contenuInfo 
+      div.row.justify-content-center
+        div.col-md-4
+          p#animal= contenuTitle
+        div.col-md-4
       div.row.d-flex.justify-content-center
         div.col-md-8.text-center
           img.img-reponse.img-fluid(src='/#{contenuImg}', alt='Responsive image')
-        div.col-md-8.text-center  
+        div.contenu-source.col-md-8.text-center  
           p= contenuSrc
-      div.offset-8.col-4.mb-4
-        button.btn
-          a(onclick='href="/question/#{type}/#{Number(numberQuestion)+1}"')
-            img.arrow.img-fluid(src='/img/frontend/button-arrow-VRAI.svg', alt='Responsive image')
-
- else 
-  div#reponse.container-fluid.redBack
-    div.row.justify-content-center.align-items-end
-      div.col-md-4
-
-        h1.display-1 FAUX
-      div.col-md-4
-        p#consommation.blockquote= contenuInfo 
-    div.row.justify-content-center
-      div.col-md-4
-        p#animal= contenuTitle
-      div.col-md-4
+        div.offset-8.col-4.mb-4
+          button.btn.arrow
+            a(onclick='href="/question/#{type}/#{Number(numberQuestion)+1}"')
+              img.img-fluid(src='/img/frontend/button-arrow-VRAI.svg', alt='Responsive image')
+  else 
+    div#reponse.container-fluid.redBack
+      div.row.justify-content-center.align-items-end
+        div.col-md-4
+          h1.display-1 FAUX
+        div.col-md-4
+          p#consommation.blockquote.align-middle= contenuInfo 
+      div.row.justify-content-center
+        div.col-md-4
+          p#animal= contenuTitle
+        div.col-md-4
       div.row.d-flex.justify-content-center
         div.col-md-8.text-center
           img.img-reponse.img-fluid(src='/#{contenuImg}', alt='Responsive image')
-        div.col-md-8.text-center  
+        div.contenu-source.col-md-8.text-center  
           p= contenuSrc
-      div.offset-8.col-4-.mb-4
-        button.btn
-          a(onclick='href="/question/#{type}/#{Number(numberQuestion)+1}"')
-            img.arrow.img-fluid(src='/img/frontend/button-arrow-FAUX.svg', alt='Responsive image')
+        div.offset-8.col-4.mb-4
+          button.btn.arrow
+            a(onclick='href="/question/#{type}/#{Number(numberQuestion)+1}"')
+              img.img-fluid(src='/img/frontend/button-arrow-FAUX.svg', alt='Responsive image')
