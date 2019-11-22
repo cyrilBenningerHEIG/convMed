@@ -59,6 +59,13 @@ body {
   padding-bottom: auto;
 }
 
+
+#fin.container {
+  background-color: #355966;
+  padding-top: 20%;
+  padding-bottom: auto;
+}
+
 #question.container {
   background-color: #355966;
   color: #f5f5f5;
