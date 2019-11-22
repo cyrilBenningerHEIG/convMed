@@ -133,7 +133,7 @@ const data = [
         "repfausse1": "Orelsan",
         "repfausse2": "L'abbé Pierre",
         "repfausse3": "Henri Dès",
-        "repphoto": "img/quote/adse.jpg",
+        "repphoto": "img/quote/asde.jpg",
         "info2": "début XXe siècle",
         "info": "Antoine de Saint Exupéry, écrivain et aviateur Français du 20ème siècle, a dit ces mots. Il est notamment connu pour son ouvrage Le Petit Prince",
         "type": 0
