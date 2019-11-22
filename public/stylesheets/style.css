@@ -267,7 +267,7 @@ h1 {
   padding: 0;
   }
   .img-size {
-    width: 100%;
+    width: auto;
     height: auto;
   }
   #reponse .img-reponse{
