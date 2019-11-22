@@ -2,7 +2,8 @@ const Quiz = require('../models/quiz');
 const express = require('express');
 const { data } = require('../Seed/data');
 const router = express.Router();
-var store = require('store');
+var cookie = require('cookie');
+var cookieParser = require('cookie-parser');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -28,17 +29,19 @@ router.get('/match/reponse', async function (req, res, next) {
   router.get('/match', async function (req, res, next) {
     question = await Quiz.find({ type: true }).sort("_id");
     var counter = null;
-    if (store.get("countMeat") == null || store.get("countMeat") >= 9) {
-      console.log("VIDE")
-      counter = store.set("countMeat", 0);
+    //== undefined || res.headers.cookie >= 9
+    if (!req.headers.cookie) {
+      res.cookie("countMeat", 0);
+      res.cookie("countMeat", 0);
+      counter = 0;
       counters = 0;
     } else {
-      console.log("AJT")
-      counters = parseInt(store.get("countMeat"));
-      counters++;
-      counter = store.set("countMeat", counters);
+//      counters = req.headers.cookie; ENVOI     countMeat=0
+      counters = req.headers.cookie;
+      console.log(counters);
+      counters=counters+1;
+      counter = res.cookie("countMeat", counters);
     }
-    console.log(counters)
     res.render('question', { qNumber: 'Q', reponse1: question[counters].repjuste, reponse2: question[counters].repfausse1, reponse3: question[counters].repfausse2, reponse4: question[counters].repfausse3, type: question[counters].type, contenu: question[counters].questionimg })
     //res.send(question);
   });
