@@ -1,7 +1,7 @@
 const data = [
     {
         "questiontxt": "Vous ne parlez que d'aller de l'avant avec les mêmes mauvaises idées qui nous ont mis dans ce pétrin, même si la seule chose raisonnable à faire est de tirer le frein à main.",
-        "correctAnswer" : "Greta Thunberg",
+        "repjuste" : "Greta Thunberg",
         "answers": ["Greta Thunberg", "Lewis Hamilton", "Nicolas Hulot", "Darius Rochebin"],
         "repphoto": "img/quote/greta.jpg",
         "info2": 2018,
@@ -10,7 +10,7 @@ const data = [
     },
     {
         "questiontxt": "L'européen oublie trop souvent qu'il n'est rien face à la nature qui reprend ses droits ",
-        "correctAnswer": "Nekfeu",
+        "repjuste": "Nekfeu",
         "answers": [ "Jean-Jacques Rousseau ","Lao Tseu", "Greta Thunberg", "Nekfeu" ],
         "repphoto": "img/quote/nekfeu.jpg",
         "info2": 2019,
@@ -19,7 +19,7 @@ const data = [
     },
     {
         "questiontxt": "Pour qu'un écologiste soit élu président, il faudrait que les arbres votent.",
-        "correctAnswer": "Coluche",
+        "repjuste": "Coluche",
         "answers": [ "Groot", "Bob Marley", "Olivier Français", "Coluche"],
         "repphoto": "img/quote/coluche.jpg",
         "info": "C'est Coluche ! A son époque, il était déjà conscient de l'enjeu de l'écologie.",
@@ -27,7 +27,7 @@ const data = [
     },
     {
         "questiontxt": " Si les membres de l’ONU savaient ce que je ressens vraiment... À quel point je suis pessimiste face à l’avenir... Peut-être qu’ils se diraient qu’ils ont choisi le mauvais homme. ",
-        "correctAnswer": "Leonardo DiCaprio",
+        "repjuste": "Leonardo DiCaprio",
         "answers": [ "Jean-Claude Juncker", "Gandhi", "Boris Johnson", "Leonardo DiCaprio"],
         "repphoto": "img/quote/leo.jpg",
         "info2": 2016,
@@ -36,7 +36,7 @@ const data = [
     },
     {
         "questiontxt": "Si l'on m'apprenait que la fin du monde est pour demain, je planterais quand même un pommier.",
-        "correctAnswer": "Martin Luther",
+        "repjuste": "Martin Luther",
         "answers": [ "Yannick Noah", "Jacques Prévert", "Isaac Newton", "Martin Luther"],
         "repphoto": "img/quote/mlk.jpg",
         "info2": "début XVIe siècle",
@@ -45,7 +45,7 @@ const data = [
     },
     {
         "questiontxt": "C'est une triste chose de songer que la nature parle et que le genre humain ne l'écoute pas.",
-        "correctAnswer": "Victor Hugo",
+        "repjuste": "Victor Hugo",
         "answers": [ "Dalaï Lama", "Adèle Thorens", "Mike Horn", "Victor Hugo"],
         "repphoto": "img/quote/hugo.jpeg",
         "info2": "XIXe siècle",
@@ -53,7 +53,7 @@ const data = [
     },
     {
         "questiontxt": "Le réchauffement climatique, c'est dû à la chatte à ta mère",
-        "correctAnswer": "Booba",
+        "repjuste": "Booba",
         "answers": [ "Donald Trump","Jean-Marie Bigard", "Kanye West","Booba"],
         "repphoto": "img/quote/booba.jpg",
         "info2": 2018,
@@ -62,7 +62,7 @@ const data = [
     },
     {
         "questiontxt": "Nous avons une seule et unique mission: Protéger la planète et passer le relai à la prochaine génération",
-        "correctAnswer": "François Hollande",
+        "repjuste": "François Hollande",
         "answers": [ "Grand Corps Malade","Alain Morisod","Angela Merkel", "François Hollande"],
         "repphoto": "img/quote/holland.jpg",
         "info": "François Hollande exprime ces mots en 2015, lors d'un discour au World Economic Forum de Davos.",
@@ -70,7 +70,7 @@ const data = [
     },
     {
         "questiontxt": " Le capitalisme ne fait pas que épuiser le travailleur, il épuise aussi la terre",
-        "correctAnswer": "Karl Marx",
+        "repjuste": "Karl Marx",
         "answers": [ "Kery James","Bernand Henry Levy","Che Guevara","Karl Marx"],
         "repphoto": "img/quote/marx.jpg",
         "info2": 1867,
@@ -79,7 +79,7 @@ const data = [
     },
     {
         "questiontxt": "Pendant que je recherche mon jardin, les hommes effacent leurs forêts",
-        "correctAnswer": "Alpha Wann",
+        "repjuste": "Alpha Wann",
         "answers": [ "Gandhi","Barack Obama","Jair Bolsonaro","Alpha Wann"],
         "repphoto": "img/quote/alphawann.jpg",
         "info2": 2015,
@@ -88,7 +88,7 @@ const data = [
     },
     {
         "questiontxt": "Je ne pense pas que ce soit un canular. Mais je ne sais pas si l'action humaine est responsable. Et ça pourra revenir en arrière",
-        "correctAnswer": "Donald Trump",
+        "repjuste": "Donald Trump",
         "answers": [ "Emmanuel Macron","Vincent Bolloré", "Mark Zuckerberg","Donald Trump"],
         "repphoto": "img/quote/trumpd.jpg",
         "info2": 2018,
@@ -97,7 +97,7 @@ const data = [
     },
     {
         "questiontxt": "Les espèces qui survivent ne sont pas les espèces les plus fortes, ni les plus intelligentes, mais celles qui s'adaptent le mieux aux changements",
-        "correctAnswer": "Charles Darwin",
+        "repjuste": "Charles Darwin",
         "answers": [ "Arnold Schwarzenegger","Optimus Prime","Bill Gates","Charles Darwin"],
         "repphoto": "img/quote/darwin.jpg",
         "info": "C'est une phrase dite par Charles Darwin, naturaliste et paléontologue, qui accompagne bien sa théorie de sélection naturelle",
@@ -105,7 +105,7 @@ const data = [
     },
     {
         "questiontxt": "Nous n'héritons pas de la terre de nos parents, nous l'empruntons à nos enfants.",
-        "correctAnswer": "Antoine de Saint-Exupéry",
+        "repjuste": "Antoine de Saint-Exupéry",
         "answers": [ "Orelsan", "L'abbé Pierre", "Henri Dès",  "Antoine de Saint-Exupéry"],
         "repphoto": "img/quote/adse.jpg",
         "info2": "début XXe siècle",
@@ -114,7 +114,7 @@ const data = [
     },
     {
         "questiontxt": "Quand le dernier arbre aura été abattu, quand la dernière rivière aura été empoisonnée , quand le dernier poisson aura été péché, alors on saura que l'argent ne se mange pas.",
-        "correctAnswer": "Geronimo",
+        "repjuste": "Geronimo",
         "answers": [ "Philippe Etchebest", "Bear Grylls", "Justin Bridou", "Geronimo"],
         "repphoto": "img/quote/geronimo.jpg",
         "info2": "XIXe siècle",
@@ -122,7 +122,7 @@ const data = [
     },
     {
         "questiontxt": "Notre maison brûle et nous regardons ailleurs.",
-        "correctAnswer": "Jacques Chirac",
+        "repjuste": "Jacques Chirac",
         "answers": [ "Alain Souchon", "Barack Obama", "Yann Marguet", "Jacques Chirac"],
         "repphoto": "img/quote/chirac.jpg",
         "info2": 2002,
@@ -130,7 +130,7 @@ const data = [
     },
     {
         "questiontxt": "Contrairement aux chasseurs qui, eux, ne sont pas des lapins, les pollueurs, eux, sont des ordures.",
-        "correctAnswer": "Philippe Geluck",
+        "repjuste": "Philippe Geluck",
         "answers": [ "Renaud","Jean-Luc Mélenchon","Coluche","Philippe Geluck"],
         "repphoto": "img/quote/geluck.jpg",
         "info2": 2006,
@@ -138,7 +138,7 @@ const data = [
     },
     {
         "questiontxt": "C'est quand le puit est à sec que nous connaissons la valeur de l'eau.",
-        "correctAnswer": "Benjamin Franklin",
+        "repjuste": "Benjamin Franklin",
         "answers": [ "Daenerys Targaryen","Mike Horn","Geronimo", "Benjamin Franklin"],
         "repphoto": "img/quote/franklin.jpeg",
         "info2": "XVIIIe siècle",
@@ -146,7 +146,7 @@ const data = [
     },
     {
         "questionimg": "img/meat/quest/poulet.jpg",
-        "correctAnswer": "Poulet",
+        "repjuste": "Poulet",
         "answers": [ "Canard", "Boeuf", "Porc", "Poulet"],
         "repphoto": "img/meat/rep/poulet.jpg",
         "info2": "Rapport Agricole 2019",
@@ -155,7 +155,7 @@ const data = [
     },
     {
         "questionimg": "img/meat/quest/pigeon.jpg",
-        "correctAnswer": "Pigeon",
+        "repjuste": "Pigeon",
         "answers": [ "Canard","Boeuf","Rat","Pigeon"],
         "repphoto": "img/meat/rep/pigeon.jpg",
         "info": "On ne consomme que les pigeons d’élevage, pas ceux des villes",
@@ -163,7 +163,7 @@ const data = [
     },
     {
         "questionimg": "img/meat/quest/boeuf.jpeg",
-        "correctAnswer": "Boeuf",
+        "repjuste": "Boeuf",
         "answers": [ "Rat","Lièvre","Poulet","Boeuf"],
         "repphoto": "img/meat/rep/boeuf.jpg",
         "info2": "Rapport Agricole 2019",
@@ -172,7 +172,7 @@ const data = [
     },
     {
         "questionimg": "img/meat/quest/agneau.jpg",
-        "correctAnswer": "Agneau",
+        "repjuste": "Agneau",
         "answers": [ "Serpent","Autruche","Cheval","Agneau"],
         "repphoto": "img/meat/rep/agneau.jpg",
         "info": "En Europe, on consomme plutôt du mouton, et de l’agneau aux USA",
@@ -180,7 +180,7 @@ const data = [
     },
     {
         "questionimg": "img/meat/quest/lapin.jpg",
-        "correctAnswer": "Lapin",
+        "repjuste": "Lapin",
         "answers": [ "Poulet","Grenouille","Chat","Lapin"],
         "repphoto": "img/meat/rep/lapin.jpg",
         "info": "En Suisse, on consomme 50kg de viande par année l’équivalent de 40 lapins nains",
@@ -188,7 +188,7 @@ const data = [
     },
     {
         "questionimg": "img/meat/quest/cochondinde.jpg",
-        "correctAnswer": "Cochon d'Inde",
+        "repjuste": "Cochon d'Inde",
         "answers": [ "Poulet","Lion","Grenouille","Cochon d'Inde"],
         "repphoto": "img/meat/rep/cochondinde.jpg",
         "info": "Dicton inca :  Elève des cochons d’Inde et mange à ta faim ",
@@ -196,7 +196,7 @@ const data = [
     },
     {
         "questionimg": "img/meat/quest/chien.PNG",
-        "correctAnswer": "Chien",
+        "repjuste": "Chien",
         "answers": [ "Boeuf","Humain","Serpent","Chien"],
         "repphoto": "img/meat/rep/chien.jpg",
         "info": "En Suisse, il est légal de consommer de la viande de chien",
@@ -204,7 +204,7 @@ const data = [
     },
     {
         "questionimg": "img/meat/quest/chat.jpg",
-        "correctAnswer": "Chat",
+        "repjuste": "Chat",
         "answers": [ "Chien","Lapin","Cheval","Chat"],
         "repphoto": "img/meat/rep/chat.jpg",
         "info": "3% des Suisses consommeraient discrètement du chat et du chien",
@@ -212,7 +212,7 @@ const data = [
     },
     {
         "questionimg": "img/meat/quest/plantes.jpg",
-        "correctAnswer": "Plantes",
+        "repjuste": "Plantes",
         "answers": [ "Boeuf","Alligator", "Porc","Plantes"],
         "repphoto": "img/meat/rep/plantes.jpg",
         "info": "Noix de coco, colza, pois, pomme de terre et bambou",
@@ -220,7 +220,7 @@ const data = [
     },
     {
         "questionimg": "img/meat/quest/champignon.jpg",
-        "correctAnswer": "Champignon",
+        "repjuste": "Champignon",
         "answers": [ "Lapin","Poulet","Chat","Champignon"],
         "repphoto": "img/meat/rep/champignon.jpg",
         "info": "Champignons avec du brocoli et du tofu",

@@ -6,7 +6,7 @@ block content
     div.row.justify-content-center.align-items-end
       div.col-md-4
 
-        h1.display-1= vraiVar
+        h1.display-1= VRAI
       div.col-md-4.contenu-info
         p#consommation.blockquote= contenuInfo 
 
@@ -16,8 +16,7 @@ block content
       div.col-md-4
       div.row.d-flex.justify-content-center
         div.col-md-8.text-center
-
-          img.img-reponse.img-fluid(src='#{contenuImg}', alt='Responsive image')
+          img.img-reponse.img-fluid(src='/#{contenuImg}', alt='Responsive image')
         div.col-md-8.text-center  
           p= contenuSrc
       div.offset-8.col-4.mb-4
@@ -30,17 +29,18 @@ block content
     div.row.justify-content-center.align-items-end
       div.col-md-4
 
-        h1.display-1= fauxVar
+        h1.display-1= FAUX
       div.col-md-4
-        p#consommation Consommation 
+        p#consommation.blockquote= contenuInfo 
     div.row.justify-content-center
       div.col-md-4
-        p#animal Poulet
+        p#animal= contenuTitle
       div.col-md-4
       div.row.d-flex.justify-content-center
         div.col-md-8.text-center
           img.img-reponse.img-fluid(src='/#{contenuImg}', alt='Responsive image')
-
+        div.col-md-8.text-center  
+          p= contenuSrc
       div.offset-8.col-4-.mb-4
         button.btn
           a(onclick='href="/#{jeu}"')
