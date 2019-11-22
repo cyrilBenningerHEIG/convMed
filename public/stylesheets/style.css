@@ -55,7 +55,7 @@ body {
 }
 
 #index.container {
-  /*background-color: #385a67;*/
+  background-color: #3e5966;
   padding-top: 20%;
   padding-bottom: auto;
 
@@ -69,6 +69,15 @@ body {
 
 a {
   color: #00B7FF;
+}
+
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:active {
+  text-decoration: none;
 }
 
 .alert {
@@ -91,19 +100,20 @@ a {
 } */
 
 /*Main page buttons*/
-#match.alert {
+#match.alert{
   background-color: #06a587;
   border: none;
   min-width: 25em;
-  font-weight: 400;
-  color: white;
-
+  color:white;
+  font-family: Caviar Dreams bold;
 }
 
 #quote.alert {
   background-color: #99b8c9;
   border: none;
   min-width: 25em;
+  color:white;
+  font-family: Caviar Dreams bold;
 }
 
 /*Question buttons styles*/

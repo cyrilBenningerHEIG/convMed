@@ -37,7 +37,6 @@ router.get('/reponse', function (req, res, next) {
     } else {
       counters = req.headers.cookie;
       var splitcookies = counters.split(";");
-      console.log(splitcookies);
       var gamestepcookie = splitcookies[0].split("=");
       var gamestep = Number(gamestepcookie[1]);
       if(gamestep==quizMeatsize){
@@ -61,7 +60,6 @@ router.get('/reponse', function (req, res, next) {
     } else {
       counters2 = req.headers.cookie;
       var split2cookies = counters2.split(";");
-      console.log(split2cookies);
       var gamestep2cookie = split2cookies[0].split("=");
       var gamestep2 = Number(gamestep2cookie[1]);
       if(gamestep2==quizQuotesize){
