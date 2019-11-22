@@ -49,6 +49,17 @@ router.get('/reponse', function (req, res, next) {
     res.render('question', { qNumber: 'Q', reponse1: question[gamestep].repjuste, reponse2: question[gamestep].repfausse1, reponse3: question[gamestep].repfausse2, reponse4: question[gamestep].repfausse3, type: question[gamestep].type, contenu: question[gamestep].questionimg })
   });
 
+  router.get('/question/:id/:number', async (req,res,next)=> {
+    let idQuestion = req.params.id
+    let numberQuestion = req.params.number
+
+    question = await Quiz.find({ type: idQuestion}).sort("_id");
+
+    res.render('question', { qNumber: 'Q'+numberQuestion, 
+    reponse1: question[numberQuestion].repjuste, reponse2: question[numberQuestion].repfausse1, reponse3: question[numberQuestion].repfausse2, 
+    reponse4: question[numberQuestion].repfausse3, type: question[numberQuestion].type, contenu: question[numberQuestion].questionimg })
+  });
+
   router.get('/quote', async function (req, res, next) {
     question = await Quiz.find({ type: false }).sort("_id");
     var quizQuotesize = 16;
@@ -67,7 +78,7 @@ router.get('/reponse', function (req, res, next) {
       }else{
         gamestep2++;
       }
-      res.cookie("countQuote",gamestep2,{path: '/quote' });
+      res.cookie("countQuote",gamestep2,{path: '/quote'});
     }
     res.render('question', { qNumber: 'Q', reponse1: question[gamestep2].repjuste, reponse2: question[gamestep2].repfausse1, reponse3: question[gamestep2].repfausse2, reponse4: question[gamestep2].repfausse3, type: question[gamestep2].type, contenu: question[gamestep2].questiontxt })
     //res.send(question);
