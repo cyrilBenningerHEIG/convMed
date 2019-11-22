@@ -33,25 +33,26 @@ block content
         div.jumbotron
           p.text-justify.display-4
             " #{contenu} "
-        div.row
-          div.col-12.col-md-6
-            div.questionButton
-              a(onclick='href="/reponse/0/#{numberQuestion1}/#{reponse1}"')
-                img.img-fluid(src='/img/frontend/button-layout-A.svg', alt='Responsive image') 
-                p.display-4= reponse1
-          div.col-12.col-md-6
-            div.questionButton
-              a(onclick='href="/reponse/0/#{numberQuestion1}/#{reponse2}"')
-                img.img-fluid(src='/img/frontend/button-layout-B.svg', alt='Responsive image')
-                p.display-4= reponse2
-        div.row
-          div.col-12.col-md-6
-            div.questionButton
-              a(onclick='href="/reponse/0/#{numberQuestion1}/#{reponse3}"')
-                img.img-fluid(src='/img/frontend/button-layout-C.svg', alt='Responsive image')
-                p.display-4= reponse3
-          div.col-12.col-md-6
-            div.questionButton
-              a(onclick='href="/reponse/0/#{numberQuestion1}/#{reponse4}"')
-                img.img-fluid(src='/img/frontend/button-layout-D.svg', alt='Responsive image')
-                p.display-4= reponse4
+        div.buttons
+          div.row
+            div.col-12.col-md-6
+              div.questionButton
+                a(onclick='href="/reponse/0/#{numberQuestion1}/#{reponse1}"')
+                  img.img-fluid(src='/img/frontend/button-layout-A.svg', alt='Responsive image') 
+                  p.display-4= reponse1
+            div.col-12.col-md-6
+              div.questionButton
+                a(onclick='href="/reponse/0/#{numberQuestion1}/#{reponse2}"')
+                  img.img-fluid(src='/img/frontend/button-layout-B.svg', alt='Responsive image')
+                  p.display-4= reponse2
+          div.row
+            div.col-12.col-md-6
+              div.questionButton
+                a(onclick='href="/reponse/0/#{numberQuestion1}/#{reponse3}"')
+                  img.img-fluid(src='/img/frontend/button-layout-C.svg', alt='Responsive image')
+                  p.display-4= reponse3
+            div.col-12.col-md-6
+              div.questionButton
+                a(onclick='href="/reponse/0/#{numberQuestion1}/#{reponse4}"')
+                  img.img-fluid(src='/img/frontend/button-layout-D.svg', alt='Responsive image')
+                  p.display-4= reponse4
