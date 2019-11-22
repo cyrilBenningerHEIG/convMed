@@ -254,7 +254,6 @@ h1 {
     z-index: 9999;
     margin-left: 0;
   }
-
   #reponse h1 {
     padding: 0.3em 0;
   }
@@ -271,6 +270,7 @@ h1 {
   }
   #reponse .img-reponse{
     width: 120vh;
+    height:auto;
   }
   #quote .jumbotron {
     padding: 0.3rem ;
