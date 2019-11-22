@@ -19,7 +19,7 @@ block content
           p= contenuSrc
       div.offset-8.col-4.mb-4
         button.btn
-          a(onclick='href="/#{jeu}"')
+          a(onclick='href="/question/#{type}/#{Number(numberQuestion)+1}"')
             img.arrow.img-fluid(src='/img/frontend/button-arrow-VRAI.svg', alt='Responsive image')
   else 
     div#reponse.container-fluid.redBack
@@ -39,5 +39,5 @@ block content
           p= contenuSrc
       div.offset-8.col-4-.mb-4
         button.btn
-          a(onclick='href="/#{jeu}"')
+          a(onclick='href="/question/#{type}/#{Number(numberQuestion)+1}"')
             img.arrow.img-fluid(src='/img/frontend/button-arrow-FAUX.svg', alt='Responsive image')
