@@ -15,8 +15,8 @@ router.get('/', function (req, res, next) {
 // });
 
 /* GET reponse page */
-router.get('/reponse', async function (req, res, next) {
-  question = await Quiz.find({ type: true }).sort("_id");
+router.get('/match/reponse', async function (req, res, next) {
+  question = await Quiz.find({ type: true}).sort("_id");
 
   res.render('reponse', { reponse: false, vraiVar: 'Vrai', fauxVar: 'Faux' });
 });
