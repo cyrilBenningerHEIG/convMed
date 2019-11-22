@@ -22,8 +22,10 @@ if (quesitonType){
   jeu = 'match'
 }else {jeu='quote'}
 
+
 router.get('/reponse', function (req, res, next) {
   res.render('reponse', { reponse: false, jeu: jeu, contenuTitle: 'Greta Thunberg', contenuInfo: '14kg / personne / an', contenuImg: 'img/meat/rep/poulet.jpg', contenuSrc: 'source info' });
+
 });
 
   /* GET reponse page -KSEKSE */
