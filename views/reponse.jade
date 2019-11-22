@@ -5,26 +5,31 @@ block content
   div#reponse.container-fluid.greenBack
     div.row.justify-content-center.align-items-end
       div.col-md-4
+
         h1.display-1= vraiVar
-      div.col-md-4
-        p#consommation Consommation 
+      div.col-md-4.contenu-info
+        p#consommation.blockquote= contenuInfo 
+
     div.row.justify-content-center
       div.col-md-4
-        p#animal Poulet
+        p#animal= contenuTitle
       div.col-md-4
       div.row.d-flex.justify-content-center
         div.col-md-8.text-center
-          img.img-reponse.img-fluid(src='img/meat/rep/poulet.jpg', alt='Responsive image')
-     
-        div.offset-8.col-4.mb-4
-          button.btn
-            a(onclick='href="/quote"')
-              img.arrow.img-fluid(src='img/frontend/button-arrow-VRAI.svg', alt='Responsive image')
+
+          img.img-reponse.img-fluid(src='#{contenuImg}', alt='Responsive image')
+        div.col-md-8.text-center  
+          p= contenuSrc
+      div.offset-8.col-4.mb-4
+        button.btn
+          a(onclick='href="/#{jeu}"')
+            img.arrow.img-fluid(src='img/frontend/button-arrow-VRAI.svg', alt='Responsive image')
 
  else 
   div#reponse.container-fluid.redBack
     div.row.justify-content-center.align-items-end
       div.col-md-4
+
         h1.display-1= fauxVar
       div.col-md-4
         p#consommation Consommation 
@@ -38,5 +43,5 @@ block content
 
       div.offset-8.col-4-.mb-4
         button.btn
-          a(onclick='href="/match"')
+          a(onclick='href="/#{jeu}"')
             img.arrow.img-fluid(src='img/frontend/button-arrow-FAUX.svg', alt='Responsive image')

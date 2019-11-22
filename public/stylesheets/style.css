@@ -51,14 +51,12 @@ body {
   height: 100vh;
   background-color: #355966;
   width: 100%;
-
 }
 
 #index.container {
   background-color: #355966;
   padding-top: 20%;
   padding-bottom: auto;
-
 }
 
 #question.container {
@@ -93,18 +91,12 @@ a:active {
   box-shadow: none;
 }
 
-
-/* #index div.row {
-  padding-top: 30%;
-
-} */
-
 /*Main page buttons*/
-#match.alert{
+#match.alert {
   background-color: #06a587;
   border: none;
   min-width: 25em;
-  color:white;
+  color: white;
   font-family: Caviar Dreams bold;
 }
 
@@ -112,10 +104,11 @@ a:active {
   background-color: #99b8c9;
   border: none;
   min-width: 25em;
-  color:white;
+  color: white;
   font-family: Caviar Dreams bold;
 }
 
+/***********/
 /*Question buttons styles*/
 .questionButton {
   text-align: center;
@@ -139,12 +132,10 @@ a:active {
   font-weight: bold;
 }
 
-
 .img-reponse {
   width: 100%;
   padding-bottom: 6rem;
 }
-
 
 .redBack {
   background-color: #b54c27;
@@ -193,7 +184,7 @@ h1 {
 
 #consommation {
   font-family: Caviar Dreams bold;
-  font-size: 4rem;
+  /*font-size: 4rem;*/
   color: white;
 }
 
@@ -212,33 +203,30 @@ h1 {
   margin-left: 60%;
 }
 
-
 .img-size {
   width: 80%;
 }
 
 
 .vertical-center {
-  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-  min-height: 100vh; /* These two lines are counted as one :-)       */
-
+  min-height: 100%;
+  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh;
+  /* These two lines are counted as one :-)       */
   display: flex;
-  align-items: center;}
-
+  align-items: center;
+}
 
 @media screen and (max-width: 992px) {
+  #index.container {
+    padding-top: 50%;
+  }
 
-    #index.container{
-      padding-top: 50%;
-    }
-    .questionButton{
-      padding: 0;
-      margin: 0.5em;
-    }
+  .questionButton {
+    padding: 0;
+    margin: 0.5em;
+  }
 
-    .img-size {
-      width: 100%;
-    }
 
     .arrow {
       width: 10rem;
@@ -248,4 +236,9 @@ h1 {
     }
 
 
+
+  .img-size {
+    width: 100%;
+
   }
+}
