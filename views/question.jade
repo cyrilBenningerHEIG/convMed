@@ -5,28 +5,28 @@ block content
     if type 
       div#match
         div.row.d-flex.justify-content-center
-          img.img-size.img-fluid(src="#{contenu}", alt='Responsive image') 
+          img.img-size.img-fluid(src="/#{contenu}", alt='Responsive image') 
         div.row
           div.col-12.col-md-6
             div.questionButton
-              a(onclick='href="/reponse"')
-                img.img-fluid(src='img/frontend/button-layout-A.svg', alt='Responsive image') 
+              a(onclick='href="/reponse/1/#{numberQuestion1}/#{reponse1}"')
+                img.img-fluid(src='/img/frontend/button-layout-A.svg', alt='Responsive image') 
                 p.display-4= reponse1
           div.col-12.col-md-6
             div.questionButton
-              a(onclick='href="/reponse"')
-                img.img-fluid(src='img/frontend/button-layout-B.svg', alt='Responsive image')
+              a(onclick='href="/reponse/1/#{numberQuestion1}/#{reponse2}"')
+                img.img-fluid(src='/img/frontend/button-layout-B.svg', alt='Responsive image')
                 p.display-4= reponse2
         div.row
           div.col-12.col-md-6
             div.questionButton
-              a(onclick='href="/reponse"')
-                img.img-fluid(src='img/frontend/button-layout-C.svg', alt='Responsive image')
+              a(onclick='href="/reponse/1/#{numberQuestion1}/#{reponse3}"')
+                img.img-fluid(src='/img/frontend/button-layout-C.svg', alt='Responsive image')
                 p.display-4= reponse3
           div.col-12.col-md-6
             div.questionButton
-              a(onclick='href="/reponse"')
-                img.img-fluid(src='img/frontend/button-layout-D.svg', alt='Responsive image')
+              a(onclick='href="/reponse/1/#{numberQuestion1}/#{reponse4}"')
+                img.img-fluid(src='/img/frontend/button-layout-D.svg', alt='Responsive image')
                 p.display-4= reponse4      
     else 
       div#quote
@@ -36,22 +36,22 @@ block content
         div.row
           div.col-12.col-md-6
             div.questionButton
-              a(onclick='href="/reponse"')
-                img.img-fluid(src='img/frontend/button-layout-A.svg', alt='Responsive image') 
+              a(onclick='href="/reponse/0/#{numberQuestion1}/#{reponse1}"')
+                img.img-fluid(src='/img/frontend/button-layout-A.svg', alt='Responsive image') 
                 p.display-4= reponse1
           div.col-12.col-md-6
             div.questionButton
-              a(onclick='href="/reponse"')
-                img.img-fluid(src='img/frontend/button-layout-B.svg', alt='Responsive image')
+              a(onclick='href="/reponse/0/#{numberQuestion1}/#{reponse2}"')
+                img.img-fluid(src='/img/frontend/button-layout-B.svg', alt='Responsive image')
                 p.display-4= reponse2
         div.row
           div.col-12.col-md-6
             div.questionButton
-              a(onclick='href="/reponse"')
-                img.img-fluid(src='img/frontend/button-layout-C.svg', alt='Responsive image')
+              a(onclick='href="/reponse/0/#{numberQuestion1}/#{reponse3}"')
+                img.img-fluid(src='/img/frontend/button-layout-C.svg', alt='Responsive image')
                 p.display-4= reponse3
           div.col-12.col-md-6
             div.questionButton
-              a(onclick='href="/reponse"')
-                img.img-fluid(src='img/frontend/button-layout-D.svg', alt='Responsive image')
+              a(onclick='href="/reponse/0/#{numberQuestion1}/#{reponse4}"')
+                img.img-fluid(src='/img/frontend/button-layout-D.svg', alt='Responsive image')
                 p.display-4= reponse4

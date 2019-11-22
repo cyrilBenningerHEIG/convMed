@@ -1,6 +1,6 @@
 const Quiz = require('../models/quiz');
 const express = require('express');
-const { data } = require('../Seed/data');
+const { data } = require('../Seed/new_data');
 const router = express.Router();
 var cookie = require('cookie');
 var cookieParser = require('cookie-parser');
@@ -16,24 +16,24 @@ router.get('/', function (req, res, next) {
 // });
 
 /* GET reponse page */
-var jeu = ''
-var quesitonType = 0
-if (quesitonType){
-  jeu = 'match'
-}else {jeu='quote'}
 
-
-router.get('/reponse', function (req, res, next) {
-  res.render('reponse', { reponse: false, jeu: jeu, contenuTitle: 'Greta Thunberg', contenuInfo: '14kg / personne / an', contenuImg: 'img/meat/rep/poulet.jpg', contenuSrc: 'source info' });
+router.get('/reponse/:id/:number/:answer', async function (req, res, next) {
+  let id = req.params.id;
+  let number = req.params.number;
+  let answer = req.params.answer;
+  question = await Quiz.find({ type: id}).sort("_id");
+  console.log(question);
+  let vrai=false;
+  if (question[number].repjuste==answer) {
+vrai = true  }
+  res.render('reponse', { reponse: vrai, contenuTitle: question[number].repjuste, contenuInfo: question[number].info, contenuImg: question[number].repphoto, contenuSrc: question[number].info2});
 
 });
-
   /* GET reponse page -KSEKSE */
   router.get('/ksekse', function (req, res, next) {
     res.render('ksekse');
   });
-
-  router.get('/match', async function (req, res, next) {
+ /* router.get('/match', async function (req, res, next) {
     question = await Quiz.find({ type: true }).sort("_id");
     var quizMeatsize = 9;
     if (!req.headers.cookie) {
@@ -54,9 +54,27 @@ router.get('/reponse', function (req, res, next) {
       res.cookie("countMeat",gamestep,{path: '/match' });
     }
     res.render('question', { qNumber: 'Q', reponse1: question[gamestep].repjuste, reponse2: question[gamestep].repfausse1, reponse3: question[gamestep].repfausse2, reponse4: question[gamestep].repfausse3, type: question[gamestep].type, contenu: question[gamestep].questionimg })
-  });
+  });*/
 
-  router.get('/quote', async function (req, res, next) {
+  router.get('/question/:id/:number', async (req,res,next)=> {
+    let idQuestion = req.params.id
+    let numberQuestion = req.params.number
+    
+    question = await Quiz.find({ type: idQuestion}).sort("_id");
+    let answer = question[numberQuestion].answers;
+    answer=shuffle(answer);
+    console.log(answer)
+    if (idQuestion==1) {
+      res.render('question', { qNumber: 'Q'+numberQuestion, 
+    reponse1: answer[0], reponse2: answer[1], reponse3: answer[2], 
+    reponse4: answer[3], type: question[numberQuestion].type, contenu: question[numberQuestion].questionimg, numberQuestion1: numberQuestion })
+    }else{
+    res.render('question', { qNumber: 'Q'+numberQuestion, 
+    reponse1: answer[0], reponse2: answer[1], reponse3: answer[2], 
+    reponse4: answer[3], type: question[numberQuestion].type, contenu: question[numberQuestion].questiontxt, numberQuestion1: numberQuestion })
+  }});
+
+  /*router.get('/quote', async function (req, res, next) {
     question = await Quiz.find({ type: false }).sort("_id");
     var quizQuotesize = 16;
     if (!req.headers.cookie) {
@@ -74,11 +92,11 @@ router.get('/reponse', function (req, res, next) {
       }else{
         gamestep2++;
       }
-      res.cookie("countQuote",gamestep2,{path: '/quote' });
+      res.cookie("countQuote",gamestep2,{path: '/quote'});
     }
     res.render('question', { qNumber: 'Q', reponse1: question[gamestep2].repjuste, reponse2: question[gamestep2].repfausse1, reponse3: question[gamestep2].repfausse2, reponse4: question[gamestep2].repfausse3, type: question[gamestep2].type, contenu: question[gamestep2].questiontxt })
     //res.send(question);
-  });
+  });*/
 
   router.get('/seed', function (req, res, next) {
     Quiz.remove({}, function (err) {
@@ -88,5 +106,14 @@ router.get('/reponse', function (req, res, next) {
     Quiz.create(seed);
     res.send(seed);
   });
-
+  function shuffle(a) {
+    var j, x, i;
+    for (i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+    }
+    return a;
+}
 module.exports = router;
