@@ -1,52 +1,49 @@
 @font-face {
-    font-family: 'Caviar Dreams';
-    src: url('fonts/CaviarDreams.eot');
-    src: url('fonts/CaviarDreams.eot?#iefix') format('embedded-opentype'),
-         url('fonts/CaviarDreams.woff2') format('woff2'),
-         url('fonts/CaviarDreams.woff') format('woff'),
-         url('fonts/CaviarDreams.ttf')  format('truetype'),
-         url('fonts/CaviarDreams.svg#Caviar Dreams') format('svg');
+  font-family: 'Caviar Dreams';
+  src: url('fonts/CaviarDreams.eot');
+  src: url('fonts/CaviarDreams.eot?#iefix') format('embedded-opentype'),
+    url('fonts/CaviarDreams.woff2') format('woff2'),
+    url('fonts/CaviarDreams.woff') format('woff'),
+    url('fonts/CaviarDreams.ttf') format('truetype'),
+    url('fonts/CaviarDreams.svg#Caviar Dreams') format('svg');
 }
 
 @font-face {
-    font-family: 'Caviar Dreams bold';
-    src: url('fonts/CaviarDreamsBold.eot');
-    src: url('fonts/CaviarDreamsBold.eot?#iefix') format('embedded-opentype'),
-         url('fonts/CaviarDreamsBold.woff2') format('woff2'),
-         url('fonts/CaviarDreamsBold.woff') format('woff'),
-         url('fonts/CaviarDreamsBold.ttf')  format('truetype'),
-         url('fonts/CaviarDreamsBold.svg#Caviar Dreams') format('svg');
-         font-weight: bold;
+  font-family: 'Caviar Dreams bold';
+  src: url('fonts/CaviarDreamsBold.eot');
+  src: url('fonts/CaviarDreamsBold.eot?#iefix') format('embedded-opentype'),
+    url('fonts/CaviarDreamsBold.woff2') format('woff2'),
+    url('fonts/CaviarDreamsBold.woff') format('woff'),
+    url('fonts/CaviarDreamsBold.ttf') format('truetype'),
+    url('fonts/CaviarDreamsBold.svg#Caviar Dreams') format('svg');
+  font-weight: bold;
 }
 
 @font-face {
-    font-family: 'Caviar Dreams italic';
-    src: url('fonts/CaviarDreamsItalic.eot');
-    src: url('fonts/CaviarDreamsItalic.eot?#iefix') format('embedded-opentype'),
-         url('fonts/CaviarDreamsItalic.woff2') format('woff2'),
-         url('fonts/CaviarDreamsItalic.woff') format('woff'),
-         url('fonts/CaviarDreamsItalic.ttf')  format('truetype'),
-         url('fonts/CaviarDreamsItalic.svg#Caviar Dreams') format('svg');
-         font-style: italic, oblique;
+  font-family: 'Caviar Dreams italic';
+  src: url('fonts/CaviarDreamsItalic.eot');
+  src: url('fonts/CaviarDreamsItalic.eot?#iefix') format('embedded-opentype'),
+    url('fonts/CaviarDreamsItalic.woff2') format('woff2'),
+    url('fonts/CaviarDreamsItalic.woff') format('woff'),
+    url('fonts/CaviarDreamsItalic.ttf') format('truetype'),
+    url('fonts/CaviarDreamsItalic.svg#Caviar Dreams') format('svg');
+  font-style: italic, oblique;
 }
 
 @font-face {
-    font-family: 'Caviar Dreams bold italic';
-    src: url('fonts/CaviarDreamsBoldItalic.eot');
-    src: url('fonts/CaviarDreamsBoldItalic.eot?#iefix') format('embedded-opentype'),
-         url('fonts/CaviarDreamsBoldItalic.woff2') format('woff2'),
-         url('fonts/CaviarDreamsBoldItalic.woff') format('woff'),
-         url('fonts/CaviarDreamsBoldItalic.ttf')  format('truetype'),
-         url('fonts/CaviarDreamsBoldItalic.svg#Caviar Dreams') format('svg');
-         font-style: italic, oblique;
-
+  font-family: 'Caviar Dreams bold italic';
+  src: url('fonts/CaviarDreamsBoldItalic.eot');
+  src: url('fonts/CaviarDreamsBoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('fonts/CaviarDreamsBoldItalic.woff2') format('woff2'),
+    url('fonts/CaviarDreamsBoldItalic.woff') format('woff'),
+    url('fonts/CaviarDreamsBoldItalic.ttf') format('truetype'),
+    url('fonts/CaviarDreamsBoldItalic.svg#Caviar Dreams') format('svg');
+  font-style: italic, oblique;
 }
-
-
 
 html, body, div, span, h1, h2, h3, h4, h5, h6, p, a {
-    font:inherit;
-    font-family: Caviar Dreams;
+  font: inherit;
+  font-family: Caviar Dreams;
 }
 
 body {
@@ -92,18 +89,23 @@ a {
   text-align: left;
 }
 
-/*Main page buttons*/
+#index div.row {
+  padding-top: 30%;
 
-#viande .alert {
-  background-color: #06a587;
 }
 
-#quote .alert {
-  background-color: #385a67;
+/*Main page buttons*/
+#match.alert {
+  background-color: #06a587;
+  border: none;
+}
+
+#quote.alert {
+  background-color: #99b8c9;
+  border: none;
 }
 
 /*Question buttons styles*/
-
 .questionButton {
   text-align: center;
   padding: 3em;
@@ -113,23 +115,25 @@ a {
   position: absolute;
   margin-left: -50%;
   margin-right: auto;
-  width: 250px;
-  height: 60px;
+  width: 60%;
+  /* height: 60px; */
   z-index: 4;
   background: none;
-  font-size: 56px;
-  line-height: 125px;
+  font-size: 48px;
+  line-height: 60px;
   color: #f5f5f5;
   text-shadow: none;
   border: none;
   border-color: transparent;
   border-bottom-color: transparent;
   box-shadow: none;
-  font-weight:bold;
+  font-weight: bold;
 }
 
-.img-fluid {
+
+.img-reponse {
   width: 100%;
+  padding-bottom: 6rem;
 }
 
 
@@ -145,34 +149,32 @@ a {
   text-align: center;
 }
 
-
-#quote .jumbotron{
+#quote .jumbotron {
   background-color: transparent;
   font-size: 48px;
   color: #f5f5f5;
 }
 
-
 #quote .row .questionButton span {
   position: absolute;
-  margin-left: -60%;
+  margin-left: -20rem;
   margin-right: auto;
-  width: 350px;
-  height: 350px;
+  width: 90%;
+  /* height: 150px; */
   z-index: 4;
   background: none;
-  font-size: 48px;
-  /*line-height: 350px;*/
+  font-size: 42px;
+  line-height: 80px;
   color: #f5f5f5;
   text-shadow: none;
   border: none;
   border-color: transparent;
   border-bottom-color: transparent;
   box-shadow: none;
-  font-weight:bold;
+  font-weight: bold;
 }
 
-.repText{
+.repText {
   font-size: 120px;
 }
 
@@ -180,7 +182,6 @@ h1 {
   font-family: Caviar Dreams bold;
   font-size: 10rem;
   color: white;
-
 }
 
 #consommation {
@@ -189,7 +190,7 @@ h1 {
   color: white;
 }
 
-#animal{
+#animal {
   font-family: Caviar Dreams;
   font-size: 3rem;
   color: white;
@@ -197,11 +198,14 @@ h1 {
   margin-top: -30px;
 }
 
-
-.arrow{
-  width: 12rem;
-  margin-top: -10rem;
+.arrow {
+  width: 8rem;
+  margin-top: -14rem;
   z-index: 3;
-  margin-left: 60%;
+  margin-left: 35%;
 }
 
+
+.img-size {
+  width: 60%;
+}

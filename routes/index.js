@@ -2,7 +2,7 @@ const Quiz = require('../models/quiz');
 const express = require('express');
 const { data } = require('../Seed/data');
 const router = express.Router();
-
+var store = require('store');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -28,15 +28,15 @@ router.get('/match/reponse', async function (req, res, next) {
   router.get('/match', async function (req, res, next) {
     question = await Quiz.find({ type: true }).sort("_id");
     var counter = null;
-    var LocalStorage = require('node-localstorage').LocalStorage,
-      localStorage = new LocalStorage('./scratch');
-    if (localStorage.getItem("countMeat") == null || localStorage.getItem("countMeat") >= 9) {
-      counter = localStorage.setItem("countMeat", 0);
+    if (store.get("countMeat") == null || store.get("countMeat") >= 9) {
+      console.log("VIDE")
+      counter = store.set("countMeat", 0);
       counters = 0;
     } else {
-      counters = parseInt(localStorage.getItem("countMeat"));
+      console.log("AJT")
+      counters = parseInt(store.get("countMeat"));
       counters++;
-      counter = localStorage.setItem("countMeat", counters);
+      counter = store.set("countMeat", counters);
     }
     console.log(counters)
     res.render('question', { qNumber: 'Q', reponse1: question[counters].repjuste, reponse2: question[counters].repfausse1, reponse3: question[counters].repfausse2, reponse4: question[counters].repfausse3, type: question[counters].type, contenu: question[counters].questionimg })
@@ -46,15 +46,13 @@ router.get('/match/reponse', async function (req, res, next) {
   router.get('/quote', async function (req, res, next) {
     question = await Quiz.find({ type: false }).sort("_id");
     var counterQuote = null;
-    var LocalStorage = require('node-localstorage').LocalStorage,
-      localStorage = new LocalStorage('./scratch');
-    if (localStorage.getItem("countQuote") == null || localStorage.getItem("countQuote") >= 9) {
-      counterQuote = localStorage.setItem("countQuote", 0);
+    if (store.get("countQuote") == null || store.get("countQuote") >= 9) {
+      counterQuote = store.set("countQuote", 0);
       countersQuote = 0;
     } else {
-      countersQuote = parseInt(localStorage.getItem("countQuote"));
+      countersQuote = parseInt(store.get("countQuote"));
       countersQuote++;
-      counterQuote = localStorage.setItem("countQuote", countersQuote);
+      counterQuote = store.set("countQuote", countersQuote);
     }
     res.render('question', { qNumber: 'Q', reponse1: question[countersQuote].repjuste, reponse2: question[countersQuote].repfausse1, reponse3: question[countersQuote].repfausse2, reponse4: question[countersQuote].repfausse3, type: question[countersQuote].type, contenu: question[countersQuote].questiontxt })
     //res.send(question);
@@ -69,5 +67,4 @@ router.get('/match/reponse', async function (req, res, next) {
     res.send(seed);
   });
 
-
-  module.exports = router;
+module.exports = router;

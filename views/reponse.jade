@@ -1,14 +1,10 @@
 extends layout
 
 block content
-
-
- if reponseFaux 
-
+ if reponse 
   div#reponse.container-fluid.greenBack
     div.row.justify-content-center.align-items-end
       div.col-md-4
-
         h1= vraiVar
       div.col-md-4
         p#consommation Consommation 
@@ -16,23 +12,15 @@ block content
       div.col-md-4
         p#animal Poulet
       div.col-md-4
-       
-    
-
       div.row.d-flex.justify-content-center
-        div.col-md-8
-          img.img-fluid(src='img/meat/rep/poulet.jpg', alt='Responsive image')
-          // arrow "GO to the next Question"
-          
-          // ligne de source de l'info
+        div.col-md-8.text-center
+          img.img-reponse.img-fluid(src='img/meat/rep/poulet.jpg', alt='Responsive image')
       div.row
-
-             a(href='#') 
+        button.btn
+          a(onclick='href="/quote"')
             img.arrow.img-fluid(src='img/frontend/button-arrow-VRAI.svg', alt='Responsive image')
 
  else 
-
-
   div#reponse.container-fluid.redBack
     div.row.justify-content-center.align-items-end
       div.col-md-4
@@ -43,16 +31,11 @@ block content
       div.col-md-4
         p#animal Poulet
       div.col-md-4
-       
-    
-
       div.row.d-flex.justify-content-center
-        div.col-md-8
-          img.img-fluid(src='img/meat/rep/poulet.jpg', alt='Responsive image')
-         
-          // ligne de source de l'info
+        div.col-md-8.text-center
+          img.img-reponse.img-fluid(src='img/meat/rep/poulet.jpg', alt='Responsive image')
+
       div.row
-
-             a(href='#') 
+        button.btn
+          a(onclick='href="/match"')
             img.arrow.img-fluid(src='img/frontend/button-arrow-FAUX.svg', alt='Responsive image')
-

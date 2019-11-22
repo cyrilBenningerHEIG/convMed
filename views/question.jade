@@ -3,29 +3,31 @@ extends layout
 block content
   div#question.container
     if type 
-      img.img-fluid(src="#{contenu}", alt='Responsive image') 
-      div.row
-        div.col-md-6
-          div.questionButton
-            a(href='/reponse') 
-              img.img-fluid(src='img/frontend/button-layout-A.svg', alt='Responsive image') 
-              span= reponse1
-        div.col-md-6
-          div.questionButton
-            a(href='/reponse')
-              img.img-fluid(src='img/frontend/button-layout-B.svg', alt='Responsive image')
-              span= reponse2
-      div.row
-        div.col-md-6
-          div.questionButton
-            a(href='/reponse')
-              img.img-fluid(src='img/frontend/button-layout-C.svg', alt='Responsive image')
-              span= reponse3
-        div.col-md-6
-          div.questionButton
-            a(href='/reponse')
-              img.img-fluid(src='img/frontend/button-layout-D.svg', alt='Responsive image')
-              span= reponse4      
+      div#match
+        div.row.d-flex.justify-content-center
+          img.img-responsive.img-size.img-fluid(src="#{contenu}", alt='Responsive image') 
+        div.row
+          div.col-md-6.col-sm-12
+            div.questionButton
+              a(onclick='href="/reponse"')
+                img.img-fluid(src='img/frontend/button-layout-A.svg', alt='Responsive image') 
+                span= reponse1
+          div.col-md-6.col-sm-12
+            div.questionButton
+              a(onclick='href="/reponse"')
+                img.img-fluid(src='img/frontend/button-layout-B.svg', alt='Responsive image')
+                span= reponse2
+        div.row
+          div.col-md-6.col-sm-12
+            div.questionButton
+              a(onclick='href="/reponse"')
+                img.img-fluid(src='img/frontend/button-layout-C.svg', alt='Responsive image')
+                span= reponse3
+          div.col-md-6.col-sm-12
+            div.questionButton
+              a(onclick='href="/reponse"')
+                img.img-fluid(src='img/frontend/button-layout-D.svg', alt='Responsive image')
+                span= reponse4      
     else 
       div#quote
         div.jumbotron
@@ -33,22 +35,22 @@ block content
         div.row
           div.col-md-6
             div.questionButton
-              a(href='/reponse') 
+              a(onclick='href="/reponse"')
                 img.img-fluid(src='img/frontend/button-layout-A.svg', alt='Responsive image') 
                 span= reponse1
           div.col-md-6
             div.questionButton
-              a(href='/reponse')
+              a(onclick='href="/reponse"')
                 img.img-fluid(src='img/frontend/button-layout-B.svg', alt='Responsive image')
                 span= reponse2
         div.row
           div.col-md-6
             div.questionButton
-              a(href='/reponse')
+              a(onclick='href="/reponse"')
                 img.img-fluid(src='img/frontend/button-layout-C.svg', alt='Responsive image')
                 span= reponse3
           div.col-md-6
             div.questionButton
-              a(href='/reponse')
+              a(onclick='href="/reponse"')
                 img.img-fluid(src='img/frontend/button-layout-D.svg', alt='Responsive image')
                 span= reponse4
