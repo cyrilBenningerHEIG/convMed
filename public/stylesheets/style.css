@@ -255,7 +255,7 @@ h1 {
     margin-left: 0;
   }
   .buttons{
-    padding-top: 2em;
+    padding-top: 1em;
     padding-bottom: auto;
   }
   #reponse h1 {
@@ -270,7 +270,7 @@ h1 {
   padding: 0;
   }
   .img-size {
-    width: auto;
+    width: 120vh;
     height: auto;
   }
   #reponse .img-reponse{
@@ -279,5 +279,8 @@ h1 {
   #quote .jumbotron {
     padding: 1rem 0.3rem ;
     margin:0;
+  }
+  .greenBack, .redBack{
+    height: 100%;
   }
 }
